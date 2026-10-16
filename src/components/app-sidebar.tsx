@@ -6,6 +6,7 @@ import {
   Wrench,
   type LucideIcon,
 } from 'lucide-react'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import {
   Sidebar,
@@ -32,11 +33,6 @@ const navItems: { id: NavSection; title: string; icon: LucideIcon }[] = [
   { id: 'utilities', title: 'Утилиты', icon: Wrench },
 ]
 
-type AppSidebarProps = {
-  activeSection: NavSection
-  onSectionChange: (section: NavSection) => void
-}
-
 function formatDateTime(date: Date) {
   const datePart = date.toLocaleDateString('ru-RU', {
     day: 'numeric',
@@ -51,12 +47,10 @@ function formatDateTime(date: Date) {
   return { datePart, timePart }
 }
 
-export function AppSidebar({
-  activeSection,
-  onSectionChange,
-}: AppSidebarProps) {
+export function AppSidebar() {
   const { theme, toggleTheme } = useTheme()
   const now = useNow()
+  const location = useLocation()
   const { datePart, timePart } = formatDateTime(now)
 
   return (
@@ -77,18 +71,24 @@ export function AppSidebar({
           <SidebarGroupLabel>Разделы</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => (
-                <SidebarMenuItem key={item.id}>
-                  <SidebarMenuButton
-                    isActive={activeSection === item.id}
-                    onClick={() => onSectionChange(item.id)}
-                    tooltip={item.title}
-                  >
-                    <item.icon />
-                    <span>{item.title}</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {navItems.map((item) => {
+                const to = `/${item.id}`
+                const isActive = location.pathname.startsWith(to)
+                return (
+                  <SidebarMenuItem key={item.id}>
+                    <SidebarMenuButton
+                      asChild
+                      isActive={isActive}
+                      tooltip={item.title}
+                    >
+                      <NavLink to={to}>
+                        <item.icon />
+                        <span>{item.title}</span>
+                      </NavLink>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

@@ -47,7 +47,6 @@ function Copy-Work($subject, $grade, $filePath, [string[]]$extraDirs) {
     }
   }
   $rel = "/content/$subject/$grade/q$q/$($item.Name)"
-  $kind = if ($item.Extension -eq '.pdf') { 'pdf' } else { 'html' }
   return [PSCustomObject]@{
     id        = (Make-Id $subject $grade $q $item.BaseName)
     subject   = $subject
@@ -56,7 +55,6 @@ function Copy-Work($subject, $grade, $filePath, [string[]]$extraDirs) {
     title     = (Get-Title $item.FullName)
     createdAt = $item.CreationTime.ToString('yyyy-MM-ddTHH:mm:ss')
     path      = $rel
-    kind      = $kind
   }
 }
 
@@ -95,15 +93,13 @@ foreach ($f in @('english-test-variants.html', 'english-test-answer-key.html')) 
 }
 
 $catalog.Add((Copy-Work 'english' 4 (Join-Path $src 'spotlight-tasks-landscape.html') @('spotlight-assets')))
-$catalog.Add((Copy-Work 'english' 4 (Join-Path $src 'spotlight-4-wb.pdf') @()))
 
 $ew = Join-Path $src 'english_worksheets'
 $ewWorks = @(
   'answer_key.html',
   'samostoyatelnaya_2_varianta.html',
   'variant_1.html',
-  'variant_2.html',
-  'kim_4.pdf'
+  'variant_2.html'
 )
 $first = Get-Item (Join-Path $ew $ewWorks[0])
 $ewQ = Get-Quarter $first.CreationTime
@@ -127,7 +123,6 @@ foreach ($f in $ewWorks) {
   New-Item -ItemType Directory -Force -Path $destDir | Out-Null
   Copy-Item $item.FullName (Join-Path $destDir $item.Name) -Force
   $rel = "/content/english/4/q$q/$($item.Name)"
-  $kind = if ($item.Extension -eq '.pdf') { 'pdf' } else { 'html' }
   $catalog.Add([PSCustomObject]@{
     id        = (Make-Id 'english' 4 $q $item.BaseName)
     subject   = 'english'
@@ -136,7 +131,6 @@ foreach ($f in $ewWorks) {
     title     = (Get-Title $item.FullName)
     createdAt = $item.CreationTime.ToString('yyyy-MM-ddTHH:mm:ss')
     path      = $rel
-    kind      = $kind
   })
 }
 

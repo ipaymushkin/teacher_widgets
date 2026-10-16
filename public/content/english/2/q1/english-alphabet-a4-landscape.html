@@ -28,18 +28,12 @@
       print-color-adjust: exact;
     }
 
-    .print-note {
-      margin: 12px;
-      text-align: center;
-      font-size: 14px;
-    }
-
     .sheet {
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 297mm;
       height: 209.5mm;
-      margin: 0 auto 8mm;
+      margin: 0;
       overflow: hidden;
       background: #fff;
     }
@@ -143,10 +137,6 @@
         background: #fff;
       }
 
-      .print-note {
-        display: none;
-      }
-
       .sheet {
         margin: 0;
       }
@@ -154,8 +144,6 @@
   </style>
 </head>
 <body>
-  <p class="print-note">Печать: A4, альбомная ориентация, масштаб 100%, поля — «Нет».</p>
-
   <main class="sheet" id="sheet" aria-label="Два одинаковых английских алфавита"></main>
 
   <template id="alphabet-template">

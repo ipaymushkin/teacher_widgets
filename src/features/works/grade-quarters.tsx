@@ -1,6 +1,6 @@
-import { ArrowLeft, FolderOpen } from 'lucide-react'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import { FolderOpen } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
 import {
   Card,
   CardDescription,
@@ -8,35 +8,38 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { QUARTERS } from '@/data/academic-calendar'
-import type { Grade, Quarter, WorkSubject } from '@/data/works-catalog'
+import type { Grade, WorkSubject } from '@/data/works-catalog'
 import { countWorks } from '@/lib/works/query'
 
 type GradeQuartersProps = {
   subject: WorkSubject
-  grade: Grade
-  gradeLabel: string
-  onBack: () => void
-  onSelectQuarter: (quarter: Quarter) => void
 }
 
-export function GradeQuarters({
-  subject,
-  grade,
-  gradeLabel,
-  onBack,
-  onSelectQuarter,
-}: GradeQuartersProps) {
+function parseGrade(value: string | undefined): Grade | null {
+  if (!value) return null
+  const n = Number(value)
+  if (n === 2 || n === 3 || n === 4 || n === 5) return n
+  return null
+}
+
+export function GradeQuarters({ subject }: GradeQuartersProps) {
+  const { grade: gradeParam } = useParams()
+  const grade = parseGrade(gradeParam)
+
+  if (!grade) {
+    return <Navigate to={`/${subject}`} replace />
+  }
+
+  if (subject === 'math' && grade !== 5) {
+    return <Navigate to="/math" replace />
+  }
+
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-2">
-        <Button variant="ghost" size="sm" onClick={onBack}>
-          <ArrowLeft />
-          Назад
-        </Button>
-      </div>
-
       <div>
-        <h2 className="text-lg font-semibold tracking-tight">{gradeLabel}</h2>
+        <h2 className="text-lg font-semibold tracking-tight">
+          {grade} класс
+        </h2>
         <p className="text-sm text-muted-foreground">
           Выберите четверть учебного года 2026/27
         </p>
@@ -46,11 +49,10 @@ export function GradeQuarters({
         {QUARTERS.map((q) => {
           const count = countWorks(subject, grade, q.quarter)
           return (
-            <button
+            <Link
               key={q.quarter}
-              type="button"
+              to={`/${subject}/${grade}/q${q.quarter}`}
               className="text-left"
-              onClick={() => onSelectQuarter(q.quarter)}
             >
               <Card className="h-full transition-colors hover:bg-muted/40">
                 <CardHeader>
@@ -67,7 +69,7 @@ export function GradeQuarters({
                   </CardDescription>
                 </CardHeader>
               </Card>
-            </button>
+            </Link>
           )
         })}
       </div>

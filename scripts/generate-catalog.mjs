@@ -8,29 +8,21 @@ const raw = fs
   .replace(/^\uFEFF/, '')
 const data = JSON.parse(raw)
 
-const nicerTitles = {
-  'spotlight-4-wb': 'Spotlight 4 — Workbook (PDF)',
-  kim_4: 'Spotlight 4 — КИМ (PDF)',
-}
-
 const body = data
   .map((w) => {
-    const title = nicerTitles[w.title] ?? w.title
     return `  {
     id: ${JSON.stringify(w.id)},
     subject: ${JSON.stringify(w.subject)},
     grade: ${w.grade},
     quarter: ${w.quarter},
-    title: ${JSON.stringify(title)},
+    title: ${JSON.stringify(w.title)},
     createdAt: ${JSON.stringify(w.createdAt)},
     path: ${JSON.stringify(w.path)},
-    kind: ${JSON.stringify(w.kind)},
   }`
   })
   .join(',\n')
 
 const out = `export type WorkSubject = 'math' | 'english'
-export type WorkKind = 'html' | 'pdf'
 export type Quarter = 1 | 2 | 3 | 4
 export type Grade = 2 | 3 | 4 | 5
 
@@ -42,7 +34,6 @@ export type WorkItem = {
   title: string
   createdAt: string
   path: string
-  kind: WorkKind
 }
 
 export const worksCatalog: WorkItem[] = [
