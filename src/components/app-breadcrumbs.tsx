@@ -52,6 +52,19 @@ function parsePath(pathname: string): {
 
 export function AppBreadcrumbs() {
   const { pathname } = useLocation()
+
+  if (pathname === '/') {
+    return (
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbPage>Главная</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+    )
+  }
+
   const { section, grade, quarter } = parsePath(pathname)
 
   if (!section) return null

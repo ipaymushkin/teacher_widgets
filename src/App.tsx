@@ -9,6 +9,7 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
+import { HomePage } from '@/features/home/home-page'
 import { EnglishPage } from '@/features/works/english-page'
 import { MathPage } from '@/features/works/math-page'
 import { GradeQuarters } from '@/features/works/grade-quarters'
@@ -37,7 +38,7 @@ function App() {
   return (
     <AppShell>
       <Routes>
-        <Route path="/" element={<Navigate to="/math" replace />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/math" element={<MathPage />} />
         <Route
           path="/math/:grade"
@@ -57,7 +58,7 @@ function App() {
           element={<QuarterView subject="english" />}
         />
         <Route path="/utilities" element={<UtilitiesPage />} />
-        <Route path="*" element={<Navigate to="/math" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AppShell>
   )
