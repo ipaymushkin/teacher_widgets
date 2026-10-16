@@ -6,15 +6,21 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import type { WorkItem } from '@/data/works-catalog'
 import { formatWorkDate } from '@/lib/works/query'
 
 /** A4 landscape at 96dpi — matches printable sheets used in content. */
 const SHEET_WIDTH = 1123
 const SHEET_HEIGHT = 794
 
+export type ContentCardItem = {
+  id: string
+  title: string
+  createdAt: string
+  path: string
+}
+
 type WorkCardProps = {
-  work: WorkItem
+  work: ContentCardItem
 }
 
 export function WorkCard({ work }: WorkCardProps) {

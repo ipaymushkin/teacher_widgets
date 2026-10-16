@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
-import { sectionTitles, type NavSection } from '@/components/app-sidebar'
+import { sectionTitles } from '@/components/app-sidebar'
 import { getUtility } from '@/data/utilities-catalog'
 import type { Grade, Quarter } from '@/data/works-catalog'
 
@@ -45,7 +45,7 @@ function renderCrumbs(crumbs: Crumb[]) {
 }
 
 function parseWorksPath(pathname: string): {
-  section: Exclude<NavSection, 'utilities'> | null
+  section: 'math' | 'english' | null
   grade: Grade | null
   quarter: Quarter | null
 } {
@@ -93,6 +93,10 @@ export function AppBreadcrumbs() {
       crumbs.push({ label: utility.title })
     }
     return renderCrumbs(crumbs)
+  }
+
+  if (pathname === '/general' || pathname.startsWith('/general/')) {
+    return renderCrumbs([{ label: sectionTitles.general }])
   }
 
   const { section, grade, quarter } = parseWorksPath(pathname)

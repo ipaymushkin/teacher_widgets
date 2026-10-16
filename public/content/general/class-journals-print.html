@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Классные журналы — для печати</title>
+  <style>
+    @page { size: A4 landscape; margin: 12mm; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      color: #000;
+      background: #eee;
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+    }
+    .sheet {
+      width: 273mm;
+      margin: 8mm auto;
+      background: #fff;
+    }
+    h1 {
+      height: 8mm;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 8mm;
+      text-align: center;
+    }
+    .tables {
+      display: grid;
+      grid-template-columns: 190mm 80mm;
+      gap: 3mm;
+      align-items: start;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      height: 5.2mm;
+      padding: 0 1mm;
+      border: 0.25mm solid #000;
+      line-height: 1.05;
+      vertical-align: middle;
+    }
+    th {
+      height: 7mm;
+      text-align: center;
+      font-weight: 700;
+    }
+    .number { width: 7mm; padding: 0; text-align: center; }
+    .name { width: 48mm; white-space: nowrap; }
+    .grade { width: 6.75mm; padding: 0; text-align: center; }
+    .date { width: 20mm; text-align: center; }
+    .topic { width: 60mm; }
+    @media print {
+      html, body { width: 100%; height: 100%; }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+      }
+      .sheet { margin: 0; }
+    }
+  
+    .sheet { min-height: 186mm; }
+    @media print {
+      html, body { width: auto; height: auto; }
+      body { display: block; background: #fff; }
+      .sheet {
+        height: 186mm;
+        min-height: 186mm;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        break-after: page;
+        page-break-after: always;
+      }
+      .sheet:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+    }
+</style>
+</head>
+<body>
+<main class="sheet">
+    <h1>3А — Английский язык</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Аксенов Матвей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Бесалян Аркадий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Буланьков Артем</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Васильев Александр</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Гуцуляк Андрей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Давыдов Савелий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Еремин Марк</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Есаулова Валерия</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Комарова Кира</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Кочетков Иван</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Красикова Мирра</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Миронычева Софья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Мишина Варвара</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Мокану Милана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Морозова Екатерина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Мурадханян Владислав</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Неёлов Лев</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Нечаева Юлия</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Новикова Элина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Олейник Макар</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Орлов Гордей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Пех Макар</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Прусов Денис</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Разамасов Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Романова Екатерина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Стыркина Алёна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Чучункин Дмитрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">28</td><td class="name">Шаливский Родион</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">29</td><td class="name">Шарловская Сюзанна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">30</td><td class="name">Яриза Матвей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>3Б — Английский язык</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Александров Руслан</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Алиев Тамерлан</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Андреева Алёна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Багдасарян Альберт</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Вавилова Алиса</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Грошева Дарья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Евстигнеев Лука</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Еремин Фёдор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Жеглова Василина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Жижина Анастасия</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Ильина Виктория</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Камилова Алиса</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Кандилян Гнел</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Карпова Ксения</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Касаткин Клим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Кизеева Олеся</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Колобова Александра</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Крайнов Егор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Кузнецова Стефания</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Литикова Мелания</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Малышев Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Манвелян Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Михалев Вячеслав</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Никулин Даниил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Новожилов Владимир</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Павлов Константин</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Павлова Яна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">28</td><td class="name">Семенова Елизавета</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">29</td><td class="name">Старостин Александр</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">30</td><td class="name">Тутринова Виктория</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">31</td><td class="name">Яковлев Дмитрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>4Б — Английский язык</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Аблаев Арсен</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Алейников Максим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Александрова Софья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Ананьина Агата</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Андреев Артемий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Бакунин Андрей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Безбородько Варвара</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Васильковский Николай</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Грибенча Андрей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Гусаров Степан</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Давтян Беглар</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Зиновьев Алексей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Иванова Елизавета</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Кинигопуло Михаил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Клеков Даниил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Козлов Ермак</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Козлов Максим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Коротаева Татьяна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Лопарёва Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Манжесов Кирилл</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Мишанина Серафима</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Никишкин Сергей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Полянин Артем</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Савина Алиса</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Секачева Варвара</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Тарасова Алиса</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Теплов Артем</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">28</td><td class="name">Хасанов Ахмад</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">29</td><td class="name">Чиесов Павел</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">30</td><td class="name">Чиесов Пётр</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>5В — Английский язык</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Асатрян Гор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Бровкин Марк</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Глазкова Матрона</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Данилова София</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Жиделева Алеся</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Ипатова Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Кандилян Марьяна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Константинова Варвара</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Коробова Мария</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Котелев Егор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Кулябина Ксения</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Кулябина Софья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Макарова Алина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Машинина Дарья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Охапкин Арсений</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Павличенко Злата</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Палакян Милена</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Петренко Лев</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Пугачёва Вероника</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Ремизов Михаил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Саарян Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Силина Диана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Федосеев Юрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Чередниченко Леонид</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Шакель Михаил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Шарифов Билал</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Шафранская Ева</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>5А — Математика</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Архаров Даниил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Босая Елизавета</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Васильев Арсений</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Васильева Алина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Вешагурова Милана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Волков Платон</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Добрякова Дарья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Дурынин Николай</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Ермолаева Ксения</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Загвоздкин Максим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Кабанова Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Корнилов Мирон</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Коряка Алисия</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Костина Алёна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Манвелян Артур</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Павлов Илья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Палакян Милана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Привезенцева Алёна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Сидоров Никита</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Соколова София</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Старостин Федор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Фантаева Алёна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Федосеев Матвей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Федосеева Алиса</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Филиппов Богдан</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Хрящев Семён</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>5Б — Математика</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Абужаева Полина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Алексеева Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Андреев Марк</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Аюбова Ёсуман</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Варданян Хачик</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Гиновян Гаяне</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Горелышева Евдокия</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Грибенча Иван</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Давыдов Илья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Думкин Максим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Зубов Дмитрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Каримова Диана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Клюева Анна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Кожухарь Даниил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Кочетков Илья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Лукьянова Ева</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Молодкина Каролина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Морской Дмитрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Паленова Анна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Поплёвин Максим</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Прокопенко Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Саликов Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Саранцев Степан</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Собиров Анас</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Терешкова Ева</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Харитонов Андрей</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Хрулёв Роман</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">28</td><td class="name">Шаливский Данила</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">29</td><td class="name">Штырц Алина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+<main class="sheet">
+    <h1>5В — Математика</h1>
+    <div class="tables">
+      <table aria-label="Таблица оценок">
+        <thead>
+          <tr><th class="number">№</th><th class="name">ФИО ученика</th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th><th class="grade"></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="number">1</td><td class="name">Асатрян Гор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">2</td><td class="name">Бровкин Марк</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">3</td><td class="name">Глазкова Матрона</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">4</td><td class="name">Данилова София</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">5</td><td class="name">Жиделева Алеся</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">6</td><td class="name">Ипатова Арина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">7</td><td class="name">Кандилян Марьяна</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">8</td><td class="name">Константинова Варвара</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">9</td><td class="name">Коробова Мария</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">10</td><td class="name">Котелев Егор</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">11</td><td class="name">Кулябина Ксения</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">12</td><td class="name">Кулябина Софья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">13</td><td class="name">Макарова Алина</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">14</td><td class="name">Машинина Дарья</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">15</td><td class="name">Охапкин Арсений</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">16</td><td class="name">Павличенко Злата</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">17</td><td class="name">Палакян Милена</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">18</td><td class="name">Петренко Лев</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">19</td><td class="name">Пугачёва Вероника</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">20</td><td class="name">Ремизов Михаил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">21</td><td class="name">Саарян Артём</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">22</td><td class="name">Силина Диана</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">23</td><td class="name">Федосеев Юрий</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">24</td><td class="name">Чередниченко Леонид</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">25</td><td class="name">Шакель Михаил</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">26</td><td class="name">Шарифов Билал</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="number">27</td><td class="name">Шафранская Ева</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <table aria-label="Даты и темы уроков">
+        <thead><tr><th class="date">Дата</th><th class="topic">Тема</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+          <tr><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

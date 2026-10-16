@@ -6,7 +6,7 @@ export function HomePage() {
       </h1>
       <p className="max-w-lg text-sm text-muted-foreground">
         Teacher Widgets — набор инструментов для учителя. Выберите раздел
-        в меню слева: математика, английский язык или утилиты.
+        в меню слева: общее, математика, английский язык или утилиты.
       </p>
     </div>
   )

@@ -1,6 +1,7 @@
 import {
   Calculator,
   Languages,
+  Layers,
   Moon,
   Sun,
   Wrench,
@@ -25,9 +26,10 @@ import { Button } from '@/components/ui/button'
 import { useNow } from '@/hooks/use-now'
 import { useTheme } from '@/hooks/use-theme'
 
-export type NavSection = 'math' | 'english' | 'utilities'
+export type NavSection = 'general' | 'math' | 'english' | 'utilities'
 
 const navItems: { id: NavSection; title: string; icon: LucideIcon }[] = [
+  { id: 'general', title: 'Общее', icon: Layers },
   { id: 'math', title: 'Математика', icon: Calculator },
   { id: 'english', title: 'Английский язык', icon: Languages },
   { id: 'utilities', title: 'Утилиты', icon: Wrench },
@@ -119,6 +121,7 @@ export function AppSidebar() {
 }
 
 export const sectionTitles: Record<NavSection, string> = {
+  general: 'Общее',
   math: 'Математика',
   english: 'Английский язык',
   utilities: 'Утилиты',

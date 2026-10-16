@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/sidebar'
 import { Separator } from '@/components/ui/separator'
 import { HomePage } from '@/features/home/home-page'
+import { GeneralPage } from '@/features/general/general-page'
 import { EnglishPage } from '@/features/works/english-page'
 import { MathPage } from '@/features/works/math-page'
 import { GradeQuarters } from '@/features/works/grade-quarters'
@@ -40,6 +41,7 @@ function App() {
     <AppShell>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/general" element={<GeneralPage />} />
         <Route path="/math" element={<MathPage />} />
         <Route
           path="/math/:grade"
