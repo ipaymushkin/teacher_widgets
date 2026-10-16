@@ -6,7 +6,7 @@ import {
   Wrench,
   type LucideIcon,
 } from 'lucide-react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 import {
   Sidebar,
@@ -56,14 +56,17 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="border-b border-sidebar-border px-4 py-3">
-        <div className="flex flex-col gap-0.5">
+        <Link
+          to="/"
+          className="flex flex-col gap-0.5 rounded-md outline-none transition-colors hover:opacity-80 focus-visible:ring-2 focus-visible:ring-ring"
+        >
           <span className="text-sm font-semibold tracking-tight">
             Teacher Widgets
           </span>
           <span className="text-xs text-muted-foreground">
             Инструменты для учителей
           </span>
-        </div>
+        </Link>
       </SidebarHeader>
 
       <SidebarContent>

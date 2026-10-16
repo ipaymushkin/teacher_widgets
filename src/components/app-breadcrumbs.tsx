@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Link, useParams, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import {
   Breadcrumb,
@@ -12,33 +12,50 @@ import {
 import { sectionTitles, type NavSection } from '@/components/app-sidebar'
 import type { Grade, Quarter } from '@/data/works-catalog'
 
-function parseSection(pathname: string): NavSection | null {
-  if (pathname.startsWith('/math')) return 'math'
-  if (pathname.startsWith('/english')) return 'english'
-  if (pathname.startsWith('/utilities')) return 'utilities'
-  return null
+type Crumb = {
+  label: string
+  href?: string
 }
 
-function parseQuarter(segment: string | undefined): Quarter | null {
-  if (!segment || !/^q[1-4]$/.test(segment)) return null
-  return Number(segment.slice(1)) as Quarter
-}
+function parsePath(pathname: string): {
+  section: NavSection | null
+  grade: Grade | null
+  quarter: Quarter | null
+} {
+  const parts = pathname.split('/').filter(Boolean)
+  const sectionPart = parts[0]
+  const section: NavSection | null =
+    sectionPart === 'math' ||
+    sectionPart === 'english' ||
+    sectionPart === 'utilities'
+      ? sectionPart
+      : null
 
-function parseGrade(value: string | undefined): Grade | null {
-  if (!value) return null
-  const n = Number(value)
-  if (n === 2 || n === 3 || n === 4 || n === 5) return n
-  return null
+  if (!section || section === 'utilities') {
+    return { section, grade: null, quarter: null }
+  }
+
+  const gradeNum = Number(parts[1])
+  const grade: Grade | null =
+    gradeNum === 2 || gradeNum === 3 || gradeNum === 4 || gradeNum === 5
+      ? gradeNum
+      : null
+
+  const quarterPart = parts[2]
+  const quarter: Quarter | null =
+    quarterPart && /^q[1-4]$/.test(quarterPart)
+      ? (Number(quarterPart.slice(1)) as Quarter)
+      : null
+
+  return { section, grade, quarter }
 }
 
 export function AppBreadcrumbs() {
-  const location = useLocation()
-  const params = useParams()
-  const section = parseSection(location.pathname)
+  const { pathname } = useLocation()
+  const { section, grade, quarter } = parsePath(pathname)
+
   if (!section) return null
 
-  const grade = parseGrade(params.grade)
-  const quarter = parseQuarter(params.quarter)
   const sectionTitle = sectionTitles[section]
   const sectionPath = `/${section}`
 
@@ -54,7 +71,7 @@ export function AppBreadcrumbs() {
     )
   }
 
-  const crumbs: { label: string; href?: string }[] = [
+  const crumbs: Crumb[] = [
     {
       label: sectionTitle,
       href: grade || quarter ? sectionPath : undefined,
