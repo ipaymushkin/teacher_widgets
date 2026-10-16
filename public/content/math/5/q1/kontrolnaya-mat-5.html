@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Самостоятельная работа. Натуральные числа. Плоскость, прямая, луч</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm 12mm; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 11.5pt;
+    line-height: 1.3;
+    color: #000;
+    background: #fff;
+  }
+
+  @media screen {
+    body {
+      width: 186mm;
+      min-height: 277mm;
+      margin: 8mm auto;
+      padding: 10mm 12mm;
+      box-sizing: border-box;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+  }
+
+  .variant {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .variant + .variant {
+    border-top: 1px dashed #999;
+    margin-top: 5mm;
+    padding-top: 5mm;
+  }
+
+  h1 {
+    font-size: 13pt;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  h2 {
+    font-size: 12pt;
+    text-align: center;
+    margin: 0.5mm 0 3.5mm;
+    font-weight: bold;
+  }
+
+  .task {
+    margin-bottom: 3.2mm;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .task-title { font-weight: bold; }
+  .task-body { margin: 0; }
+
+  ol.items {
+    list-style: none;
+    margin: 0.5mm 0 0;
+    padding-left: 7mm;
+  }
+
+  ol.items li { margin-bottom: 0.6mm; }
+  ol.items li .lit { display: inline-block; min-width: 6mm; }
+
+  .chain {
+    display: flex;
+    align-items: flex-end;
+    margin: 3mm 0 1mm 7mm;
+    flex-wrap: nowrap;
+  }
+
+  .cell {
+    width: 11mm;
+    height: 7.5mm;
+    border: 1.1pt solid #000;
+    border-radius: 1.2mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11pt;
+    flex: 0 0 auto;
+  }
+
+  .arrow {
+    flex: 0 0 auto;
+    width: 15mm;
+    text-align: center;
+    padding-bottom: 2.2mm;
+  }
+
+  .arrow .op {
+    display: block;
+    font-size: 10.5pt;
+    margin-bottom: 0.4mm;
+    white-space: nowrap;
+  }
+
+  .arrow .line {
+    display: block;
+    border-top: 1pt solid #000;
+    position: relative;
+  }
+
+  .arrow .line::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -1mm;
+    border-left: 1.5mm solid #000;
+    border-top: 1mm solid transparent;
+    border-bottom: 1mm solid transparent;
+  }
+</style>
+</head>
+<body>
+
+<section class="variant">
+  <h1>Самостоятельная работа</h1>
+  <h2>Вариант 1</h2>
+
+  <div class="task">
+    <span class="task-title">Задание 1.</span>
+    <span class="task-body">Представьте в десятичной записи число:</span>
+    <ol class="items">
+      <li><span class="lit">а)</span>двадцать два миллиона три тысячи восемь;</li>
+      <li><span class="lit">б)</span>семьсот семьдесят семь миллиардов шестьдесят восемь тысяч.</li>
+    </ol>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 2.</span>
+    <span class="task-body">Найдите число в последней клетке цепочки.</span>
+    <div class="chain">
+      <div class="cell">72</div>
+      <div class="arrow"><span class="op">: 9</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">+ 12</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">&middot; 5</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">: 10</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">+ 18</span><span class="line"></span></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 3.</span>
+    <span class="task-body">
+      Отметьте точки <i>K</i> и <i>L</i> и проведите прямую <i>KL</i>.
+      Отметьте точку <i>P</i> на прямой <i>KL</i>, не лежащую на отрезке <i>KL</i>.
+    </span>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 4.</span>
+    <span class="task-body">
+      Расстояние от пристани на берегу озера до острова катер проходит за 3 ч со скоростью
+      16 км/ч. Сколько времени потребуется для преодоления этого расстояния моторной лодке,
+      движущейся со скоростью 12 км/ч?
+    </span>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 5.</span>
+    <span class="task-body">Выразите в килограммах:</span>
+    <ol class="items">
+      <li><span class="lit">а)</span>9 т 4 ц 30 кг;</li>
+      <li><span class="lit">б)</span>27 ц 4 кг.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="variant">
+  <h1>Самостоятельная работа</h1>
+  <h2>Вариант 2</h2>
+
+  <div class="task">
+    <span class="task-title">Задание 1.</span>
+    <span class="task-body">Представьте в десятичной записи число:</span>
+    <ol class="items">
+      <li><span class="lit">а)</span>один миллиард десять миллионов девять тысяч;</li>
+      <li><span class="lit">б)</span>пятьдесят два миллиарда восемь тысяч двенадцать.</li>
+    </ol>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 2.</span>
+    <span class="task-body">Найдите число в последней клетке цепочки.</span>
+    <div class="chain">
+      <div class="cell">42</div>
+      <div class="arrow"><span class="op">: 7</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">&middot; 9</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">+ 6</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">: 10</span><span class="line"></span></div>
+      <div class="cell"></div>
+      <div class="arrow"><span class="op">+ 24</span><span class="line"></span></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 3.</span>
+    <span class="task-body">
+      Отметьте точки <i>K</i> и <i>L</i> и проведите прямую <i>KL</i>.
+      Отметьте на отрезке <i>KL</i> точку <i>M</i>. Лежит ли эта точка на прямой <i>KL</i>?
+    </span>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 4.</span>
+    <span class="task-body">
+      Расстояние от города до села велосипедист проезжает за 4 ч, а пешеход проходит за 10 ч.
+      С какой скоростью движется велосипедист, если скорость пешехода 6 км/ч?
+    </span>
+  </div>
+
+  <div class="task">
+    <span class="task-title">Задание 5.</span>
+    <span class="task-body">Выразите в граммах:</span>
+    <ol class="items">
+      <li><span class="lit">а)</span>2 ц 20 кг 500 г;</li>
+      <li><span class="lit">б)</span>3 ц 3 кг 70 г.</li>
+    </ol>
+  </div>
+</section>
+
+</body>
+</html>

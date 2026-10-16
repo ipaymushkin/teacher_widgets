@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School again! — Printable worksheet</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 8mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #28242a;
+      background: #ece8ee;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sheet {
+      width: 297mm;
+      min-height: 210mm;
+      margin: 10mm auto;
+      padding: 8mm;
+      background: #fff;
+      box-shadow: 0 3mm 10mm rgba(42, 31, 48, 0.16);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 5mm;
+      height: 19mm;
+      margin-bottom: 4mm;
+      border-bottom: 1mm solid #ead8e4;
+    }
+
+    .unit-number {
+      display: grid;
+      width: 18mm;
+      height: 16mm;
+      place-items: center;
+      border: 0.8mm solid #bc628e;
+      border-radius: 4mm;
+      color: #fff;
+      background: #aa4f7b;
+      font-size: 24pt;
+      font-weight: 700;
+      box-shadow: inset 0 0 0 1mm #d79ab8;
+    }
+
+    h1 {
+      margin: 0;
+      color: #a64f79;
+      font-size: 26pt;
+      line-height: 1;
+    }
+
+    .student {
+      display: flex;
+      gap: 5mm;
+      margin-left: auto;
+      font-size: 9pt;
+    }
+
+    .student span {
+      display: inline-block;
+      min-width: 40mm;
+      border-bottom: 0.35mm solid #666;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7mm;
+    }
+
+    .column + .column {
+      padding-left: 7mm;
+      border-left: 0.45mm dashed #d8c6d2;
+    }
+
+    .exercise {
+      margin-bottom: 4mm;
+      break-inside: avoid;
+    }
+
+    .exercise-title {
+      display: flex;
+      align-items: center;
+      gap: 2.2mm;
+      margin: 0 0 2.5mm;
+      font-size: 11pt;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-grid;
+      width: 7.5mm;
+      height: 7.5mm;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 2mm;
+      color: #fff;
+      background: #b55583;
+      font-size: 11pt;
+      box-shadow: inset 0 0 0 0.5mm #dfa9c1;
+    }
+
+    .yes-no-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm 5mm;
+    }
+
+    .picture-question {
+      display: grid;
+      grid-template-columns: 7mm 19mm 1fr;
+      align-items: center;
+      min-height: 18mm;
+      font-size: 9pt;
+    }
+
+    .q-number {
+      align-self: start;
+      padding-top: 1mm;
+      font-weight: 700;
+    }
+
+    .icon {
+      display: grid;
+      width: 17mm;
+      height: 15mm;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .icon img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .sentence {
+      line-height: 1.35;
+    }
+
+    .answer-line {
+      display: inline-block;
+      width: 17mm;
+      height: 4mm;
+      margin-left: 1.5mm;
+      vertical-align: bottom;
+      border-bottom: 0.35mm dotted #555;
+    }
+
+    .example {
+      margin-left: 1.5mm;
+      color: #8e4267;
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+
+    .word-bank {
+      margin: 0 0 3mm;
+      padding: 2.5mm 4mm;
+      border: 0.5mm solid #b9cad8;
+      border-radius: 8mm;
+      color: #5f4b58;
+      background: #eef5f8;
+      font-size: 10pt;
+      font-weight: 700;
+      text-align: center;
+      word-spacing: 2mm;
+    }
+
+    .dialogues {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .dialogue {
+      position: relative;
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      align-items: center;
+      min-height: 29mm;
+      padding: 2mm 3mm;
+      border: 0.5mm solid #cabac5;
+      border-radius: 6mm;
+      background: #fcf9fb;
+      font-size: 9.5pt;
+      line-height: 1.65;
+    }
+
+    .dialogue.wide {
+      grid-column: 1 / -1;
+      grid-template-columns: 44mm 1fr;
+    }
+
+    .dialogue-picture {
+      display: block;
+      width: 100%;
+      height: 25mm;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .dialogue.wide .dialogue-picture {
+      height: 30mm;
+    }
+
+    .speech {
+      padding: 1.5mm 2.5mm;
+      border: 0.4mm solid #6b6268;
+      border-radius: 5mm;
+      background: #fff;
+    }
+
+    .dialogue strong {
+      color: #a64f79;
+    }
+
+    .fill-line {
+      display: inline-block;
+      min-width: 25mm;
+      height: 4.5mm;
+      vertical-align: bottom;
+      border-bottom: 0.4mm dotted #555;
+    }
+
+    .act-out {
+      margin-top: 3mm;
+      padding: 3mm 4mm;
+      border: 0.5mm dashed #c992ad;
+      border-radius: 3mm;
+      color: #704158;
+      background: #fff7fb;
+      font-size: 11pt;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .number-match {
+      display: grid;
+      grid-template-columns: 1fr 40mm 1fr;
+      gap: 4mm;
+      align-items: stretch;
+    }
+
+    .number-list {
+      display: grid;
+      gap: 1.4mm;
+    }
+
+    .number-word {
+      display: grid;
+      grid-template-columns: 7mm 1fr;
+      align-items: center;
+      min-height: 7mm;
+      font-size: 10pt;
+    }
+
+    .number-word b {
+      font-size: 9pt;
+    }
+
+    .spelling {
+      letter-spacing: 1.6mm;
+      white-space: nowrap;
+    }
+
+    .middle-numbers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2mm;
+      padding: 1mm;
+    }
+
+    .number-tile {
+      display: grid;
+      min-height: 8mm;
+      place-items: center;
+      border: 0.45mm solid #e5b460;
+      border-radius: 2mm;
+      color: #c77e23;
+      background: #fff9e8;
+      font-size: 15pt;
+      font-weight: 800;
+    }
+
+    .categories-bank {
+      margin-bottom: 4mm;
+      padding: 2.5mm 4mm;
+      border: 0.5mm solid #b7c4ce;
+      border-radius: 4mm;
+      background: #f1f5f7;
+      font-size: 10pt;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .categories-bank span::before {
+      content: "• ";
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4mm;
+    }
+
+    .category {
+      overflow: hidden;
+      border: 0.55mm solid #bcaab5;
+      border-radius: 4mm;
+      background: #fff;
+      text-align: center;
+    }
+
+    .category h3 {
+      margin: 0;
+      padding: 2mm;
+      color: #fff;
+      background: #af557f;
+      font-size: 15pt;
+      text-transform: lowercase;
+    }
+
+    .category.example-it h3 {
+      background: #738aa0;
+    }
+
+    .category .given {
+      margin: 2.5mm 0 1mm;
+      color: #86405f;
+      font-size: 11pt;
+      font-weight: 700;
+    }
+
+    .category-figure {
+      display: block;
+      width: 100%;
+      height: 18mm;
+      margin-top: 2mm;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .category.example-it .given {
+      color: #536b80;
+    }
+
+    .writing-line {
+      height: 8mm;
+      margin: 0 4mm;
+      border-bottom: 0.4mm dotted #555;
+    }
+
+    .category .writing-line:last-child {
+      margin-bottom: 4mm;
+    }
+
+    .footer-note {
+      margin-top: 3mm;
+      color: #846f7b;
+      font-size: 7.5pt;
+      text-align: right;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .sheet {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <div class="unit-number">1</div>
+      <h1>School again!</h1>
+      <div class="student">
+        Name: <span></span>
+        Date: <span></span>
+      </div>
+    </header>
+
+    <div class="columns">
+      <section class="column">
+        <div class="exercise">
+          <h2 class="exercise-title"><span class="badge">1</span>Look, read and write <em>yes</em> or <em>no</em>.</h2>
+          <div class="yes-no-grid">
+            <div class="picture-question">
+              <span class="q-number">1</span><span class="icon"><img src="school-again-assets/school.png" alt="School"></span>
+              <span class="sentence">This is a school. <span class="example">yes</span></span>
+            </div>
+            <div class="picture-question">
+              <span class="q-number">2</span><span class="icon"><img src="school-again-assets/pencil.png" alt="Pencil"></span>
+              <span class="sentence">This is a pen.<span class="answer-line"></span></span>
+            </div>
+            <div class="picture-question">
+              <span class="q-number">3</span><span class="icon"><img src="school-again-assets/school-bag.png" alt="School bag"></span>
+              <span class="sentence">This is a school bag.<span class="answer-line"></span></span>
+            </div>
+            <div class="picture-question">
+              <span class="q-number">4</span><span class="icon"><img src="school-again-assets/ruler.png" alt="Ruler"></span>
+              <span class="sentence">This is a rubber.<span class="answer-line"></span></span>
+            </div>
+            <div class="picture-question">
+              <span class="q-number">5</span><span class="icon"><img src="school-again-assets/book.png" alt="Book"></span>
+              <span class="sentence">This is a book.<span class="answer-line"></span></span>
+            </div>
+            <div class="picture-question">
+              <span class="q-number">6</span><span class="icon"><img src="school-again-assets/pencil-case.png" alt="Pencil case"></span>
+              <span class="sentence">This is a pencil case.<span class="answer-line"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise">
+          <h2 class="exercise-title"><span class="badge">2</span>Look, read and write.</h2>
+          <div class="word-bank">Hi &nbsp;•&nbsp; I’m &nbsp;•&nbsp; Bye &nbsp;•&nbsp; What’s your</div>
+          <div class="dialogues">
+            <div class="dialogue">
+              <img class="dialogue-picture" src="school-again-assets/dialogue-hello.png" alt="Two pupils greeting each other">
+              <div class="speech">Hello!<br><strong>1)</strong> Hi, I’m Tony.</div>
+            </div>
+            <div class="dialogue">
+              <img class="dialogue-picture" src="school-again-assets/dialogue-goodbye.png" alt="Two pupils saying goodbye">
+              <div class="speech">Goodbye, Paco.<br><strong>2)</strong> <span class="fill-line"></span>, Larry.</div>
+            </div>
+            <div class="dialogue wide">
+              <img class="dialogue-picture" src="school-again-assets/dialogue-name.png" alt="Two pupils introducing themselves">
+              <div class="speech">
+                <strong>3)</strong> <span class="fill-line"></span> name?<br>
+                <strong>4)</strong> <span class="fill-line"></span> Maya.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="act-out"><span class="badge">3</span> &nbsp; Now act out.</div>
+      </section>
+
+      <section class="column">
+        <div class="exercise">
+          <h2 class="exercise-title"><span class="badge">4</span>Read and write. Then match.</h2>
+          <div class="number-match">
+            <div class="number-list">
+              <div class="number-word"><b>1</b><span class="spelling">f__rt__n</span></div>
+              <div class="number-word"><b>2</b><span class="spelling">ei__t__n</span></div>
+              <div class="number-word"><b>3</b><span class="spelling">t__nt__</span></div>
+              <div class="number-word"><b>4</b><span class="spelling">fi__teen</span></div>
+              <div class="number-word"><b>5</b><span class="spelling">twel__e</span></div>
+            </div>
+
+            <div class="middle-numbers" aria-label="numbers to match">
+              <span class="number-tile">18</span>
+              <span class="number-tile">13</span>
+              <span class="number-tile">15</span>
+              <span class="number-tile">20</span>
+              <span class="number-tile">14</span>
+              <span class="number-tile">11</span>
+              <span class="number-tile">12</span>
+              <span class="number-tile">16</span>
+              <span class="number-tile">19</span>
+              <span class="number-tile">17</span>
+            </div>
+
+            <div class="number-list">
+              <div class="number-word"><b>6</b><span class="spelling">thi__teen</span></div>
+              <div class="number-word"><b>7</b><span class="spelling">se__enteen</span></div>
+              <div class="number-word"><b>8</b><span class="spelling">si__teen</span></div>
+              <div class="number-word"><b>9</b><span class="spelling">nin__teen</span></div>
+              <div class="number-word"><b>10</b><span class="spelling">e__even</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise">
+          <h2 class="exercise-title"><span class="badge">5</span>Read and write.</h2>
+          <div class="categories-bank">
+            <span>John</span> <span>Pat</span> <span>ruler</span> <span>frog</span>
+            <span>boy</span> <span>Tom</span> <span>book</span><br>
+            <span>Sally</span> <span>duck</span> <span>David</span>
+            <span>girl</span> <span>Jenny</span>
+          </div>
+
+          <div class="categories">
+            <div class="category">
+              <h3>he</h3>
+              <img class="category-figure" src="school-again-assets/person-he.png" alt="Boy">
+              <div class="given">John</div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+            </div>
+            <div class="category">
+              <h3>she</h3>
+              <img class="category-figure" src="school-again-assets/person-she.png" alt="Girl">
+              <div class="given">Pat</div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+            </div>
+            <div class="category example-it">
+              <h3>it</h3>
+              <img class="category-figure" src="school-again-assets/object-it.png" alt="Ruler">
+              <div class="given">ruler</div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+              <div class="writing-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-note">Module 1 · Printable worksheet</div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

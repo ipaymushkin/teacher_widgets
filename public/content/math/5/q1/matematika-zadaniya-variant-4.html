@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задания по математике — вариант 4</title>
+  <style>
+    @page { size: A4 portrait; margin: 9mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #172637; background: #e9edf1; font-family: Arial, Helvetica, sans-serif; }
+    .page { width: 210mm; min-height: 297mm; margin: 10mm auto; padding: 9mm; background: #fff; box-shadow: 0 3mm 10mm #14233229; }
+    header { display: flex; align-items: center; gap: 4mm; margin-bottom: 4mm; padding-bottom: 3mm; border-bottom: .8mm solid #5a87a6; }
+    .mark { display: grid; width: 13mm; height: 13mm; flex: 0 0 auto; place-items: center; border-radius: 50%; color: #fff; background: #356e98; font: 700 18pt/1 Arial; }
+    h1 { margin: 0; color: #285a7e; font-size: 19pt; line-height: 1; }
+    .variant { margin: 1mm 0 0; color: #647888; font-size: 8.5pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+    .column + .column { padding-left: 7mm; border-left: .4mm dashed #aac0d0; }
+    .task { position: relative; margin: 0 0 3mm; padding: 2.5mm 3mm 2.5mm 10mm; border: .35mm solid #cfdae2; border-radius: 2.5mm; background: #fbfdfe; break-inside: avoid; }
+    .task-number { position: absolute; top: 2.2mm; left: 2.2mm; display: grid; width: 6mm; height: 6mm; place-items: center; border-radius: 1.5mm; color: #fff; background: #467c9f; font: 700 9pt/1 Arial; }
+    .task p { margin: 0; font-size: 9.4pt; font-weight: 600; line-height: 1.28; }
+    .compare { display: flex; align-items: center; justify-content: space-between; gap: 3mm; margin-top: 2mm; font-size: 9.5pt; font-weight: 700; text-align: center; white-space: nowrap; }
+    .box { display: inline-block; width: 6mm; height: 6mm; margin: 0 1mm; border: .4mm solid #708797; vertical-align: middle; }
+    .diagram { display: block; max-width: 100%; margin: 2mm auto 0; overflow: visible; }
+    .diagram text { fill: #172637; font-family: Arial, Helvetica, sans-serif; font-size: 4.2px; font-weight: 700; }
+    .line { fill: none; stroke: #172637; stroke-width: .55; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { stroke-width: .38; }
+    .point { fill: #172637; }
+    .construction-space { height: 28mm; margin-top: 2mm; border: .35mm solid #9aadb9; background: #fff; }
+    .construction-space.large { height: 32mm; }
+    @media print {
+      body { background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .page { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="mark">∑</div>
+      <div>
+        <h1>Задания по математике</h1>
+        <p class="variant">Вариант 2</p>
+      </div>
+    </header>
+
+    <div class="columns">
+      <section class="column">
+        <article class="task">
+          <span class="task-number">1</span>
+          <p>Запишите цифрами число двести один миллион четыре тысячи пятьдесят.</p>
+        </article>
+
+        <article class="task">
+          <span class="task-number">2</span>
+          <p>Какие числа при счёте называют между числами <strong>270&nbsp;609</strong> и <strong>270&nbsp;614</strong>?</p>
+        </article>
+
+        <article class="task">
+          <span class="task-number">3</span>
+          <p>Впишите один из знаков сравнения <strong>&gt;, =</strong> или <strong>&lt;</strong>.</p>
+          <div class="compare">
+            <div>607&nbsp;315 <span class="box"></span> 609&nbsp;315</div>
+            <div>320&nbsp;мм <span class="box"></span> 3&nbsp;м&nbsp;20&nbsp;мм</div>
+          </div>
+        </article>
+
+        <article class="task">
+          <span class="task-number">4</span>
+          <p>Велосипедист проехал <strong>1 км</strong> со скоростью <strong>200 м/мин</strong>. Сколько минут занял весь путь?</p>
+        </article>
+
+        <article class="task">
+          <span class="task-number">5</span>
+          <p>Постройте отрезок <em>AK</em> длиной <strong>4 см 6 мм</strong>.</p>
+          <div class="construction-space" aria-label="Место для построения"></div>
+        </article>
+
+        <article class="task">
+          <span class="task-number">6</span>
+          <p>Отметьте на луче точки <em>A(2)</em> и <em>M(5)</em>.</p>
+          <svg class="diagram" style="width:80mm;height:27mm" viewBox="0 0 80 27" aria-label="Координатная сетка и луч">
+            <defs>
+              <marker id="arrow6v4" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                <path d="M0,0 L5,2.5 L0,5 Z" fill="#172637"/>
+              </marker>
+              <pattern id="grid6v4" width="5" height="5" patternUnits="userSpaceOnUse">
+                <path d="M5 0 L0 0 0 5" fill="none" stroke="#8ca6b8" stroke-width=".3"/>
+              </pattern>
+            </defs>
+            <rect x="5" y="2" width="70" height="20" fill="url(#grid6v4)"/>
+            <line class="line" x1="6" y1="14.5" x2="75" y2="14.5" marker-end="url(#arrow6v4)"/>
+            <g class="line thin">
+              <line x1="10" y1="11" x2="10" y2="18"/><line x1="20" y1="11" x2="20" y2="18"/>
+              <line x1="30" y1="11" x2="30" y2="18"/><line x1="40" y1="11" x2="40" y2="18"/>
+              <line x1="50" y1="11" x2="50" y2="18"/><line x1="60" y1="11" x2="60" y2="18"/>
+              <line x1="70" y1="11" x2="70" y2="18"/>
+            </g>
+            <circle class="point" cx="10" cy="14.5" r="1"/><circle class="point" cx="20" cy="14.5" r="1"/>
+            <text x="8.5" y="26">0</text><text x="18.5" y="26">1</text>
+          </svg>
+        </article>
+
+        <article class="task">
+          <span class="task-number">7</span>
+          <p>Сколько чисел расположено на координатной прямой между числами <strong>4503</strong> и <strong>4513</strong>?</p>
+        </article>
+      </section>
+
+      <section class="column">
+        <article class="task">
+          <span class="task-number">8</span>
+          <p>Отметьте точки <em>A</em> и <em>X</em>, лежащие на прямой <em>MN</em>, и точку <em>C</em>, не лежащую на этой прямой.</p>
+          <svg class="diagram" style="width:76mm;height:20mm" viewBox="0 0 76 20" aria-label="Прямая MN">
+            <line class="line" x1="10" y1="10" x2="66" y2="10"/>
+            <text x="7.5" y="15">M</text><text x="65" y="15">N</text>
+          </svg>
+        </article>
+
+        <article class="task">
+          <span class="task-number">9</span>
+          <p>Постройте три прямые так, чтобы они попарно пересекались.</p>
+          <div class="construction-space large" aria-label="Место для построения"></div>
+        </article>
+
+        <article class="task">
+          <span class="task-number">10</span>
+          <p>Начертите два луча так, чтобы их общей частью был отрезок <em>KM</em>. Запишите обозначения этих лучей.</p>
+          <svg class="diagram" style="width:70mm;height:19mm" viewBox="0 0 70 19" aria-label="Отрезок KM">
+            <line class="line" x1="12" y1="10" x2="58" y2="10"/>
+            <circle class="point" cx="12" cy="10" r="1"/><circle class="point" cx="58" cy="10" r="1"/>
+            <text x="9.5" y="15">K</text><text x="58" y="15">M</text>
+          </svg>
+        </article>
+
+        <article class="task">
+          <span class="task-number">11</span>
+          <p>Запишите число вершин и число звеньев ломаной.</p>
+          <svg class="diagram" style="width:70mm;height:25mm" viewBox="0 0 70 25" aria-label="Ломаная линия с пятью вершинами">
+            <polyline class="line" points="31,4 15,21 53,22 13,10 51,8"/>
+            <circle class="point" cx="31" cy="4" r="1"/><circle class="point" cx="15" cy="21" r="1"/>
+            <circle class="point" cx="53" cy="22" r="1"/><circle class="point" cx="13" cy="10" r="1"/>
+            <circle class="point" cx="51" cy="8" r="1"/>
+          </svg>
+        </article>
+
+        <article class="task">
+          <span class="task-number">12</span>
+          <p>Длина каждой стороны семиугольника равна <strong>60 см</strong>. Вычислите его периметр и ответ запишите в дециметрах.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

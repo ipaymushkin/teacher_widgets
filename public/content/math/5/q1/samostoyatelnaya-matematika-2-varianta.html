@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Самостоятельная работа по математике — 2 варианта</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 11.5pt;
+      line-height: 1.25;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+      align-items: center;
+    }
+
+    .variant {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 6mm 0 4mm;
+    }
+
+    .variant:first-child {
+      border-right: 1.5px dashed #666;
+      padding-right: 7mm;
+    }
+
+    .variant:last-child {
+      padding-left: 7mm;
+    }
+
+    .header {
+      margin-bottom: 3mm;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 2mm;
+      font-size: 14pt;
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 3mm;
+      font-size: 10.5pt;
+    }
+
+    .meta .line {
+      display: inline-block;
+      min-width: 38mm;
+      border-bottom: 1px solid #000;
+      vertical-align: bottom;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 6mm;
+    }
+
+    li {
+      margin: 0 0 2.8mm;
+      padding-left: 1mm;
+    }
+
+    .task-title {
+      font-weight: 700;
+    }
+
+    .subtasks {
+      margin-top: 1mm;
+    }
+
+    .subtasks div {
+      margin: 0.7mm 0;
+    }
+
+    .expr {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .space {
+      display: block;
+      height: 5mm;
+    }
+
+    .space-sm {
+      display: block;
+      height: 3.5mm;
+    }
+
+    @media screen {
+      body {
+        background: #ddd;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sheet {
+        width: 297mm;
+        min-height: 210mm;
+        margin: 12px auto;
+        padding: 12mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+      }
+    }
+
+    @media print {
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sheet {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="variant">
+      <header class="header">
+        <h1>Вариант 1</h1>
+        <div class="meta">
+          <span>Фамилия имя: <span class="line"></span></span>
+          <span>Класс: <span class="line" style="min-width:16mm"></span></span>
+        </div>
+      </header>
+
+      <ol>
+        <li>
+          <span class="task-title">Запишите выражение:</span>
+          <div class="subtasks">
+            <div>а) сумма 107 и <span class="expr">z − d + 14</span>;</div>
+            <div>б) разность <span class="expr">777 + 33</span> и <span class="expr">196 − 145</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Составьте выражение для решения задачи и найдите его значение.</span>
+          Длина одного железнодорожного перегона равна 142 км, что на 107 км меньше длины другого перегона. Чему равна длина двух перегонов вместе?
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Упростите выражение и найдите его значение:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">c + 61 + 139</span> при <span class="expr">c = 110</span>;</div>
+            <div>б) <span class="expr">451 + s + 359</span> при <span class="expr">s = 113</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Найдите значение выражения:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">6 т 3 ц : 2</span>;</div>
+            <div>б) <span class="expr">10 дм 12 мм : 2</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Вычислите:</span>
+          <div class="subtasks">
+            <div><span class="expr">203 · 26 − (3292 + 2579) : 57</span></div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Вычислите:</span>
+          <div class="subtasks">
+            <div><span class="expr">20 748 : 57 : (182 : 13)</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="variant">
+      <header class="header">
+        <h1>Вариант 2</h1>
+        <div class="meta">
+          <span>Фамилия имя: <span class="line"></span></span>
+          <span>Класс: <span class="line" style="min-width:16mm"></span></span>
+        </div>
+      </header>
+
+      <ol>
+        <li>
+          <span class="task-title">Запишите выражение:</span>
+          <div class="subtasks">
+            <div>а) сумма <span class="expr">17 + 3</span> и <span class="expr">24 − 9</span>;</div>
+            <div>б) разность 31 и <span class="expr">a + b − 28</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Составьте выражение для решения задачи и найдите его значение.</span>
+          С одного дерева собрали 65 кг абрикосов, что на 15 кг больше, чем с другого дерева. Сколько килограммов абрикосов собрали с двух деревьев вместе?
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Упростите выражение и найдите его значение:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">32 + a + 68</span> при <span class="expr">a = 71</span>;</div>
+            <div>б) <span class="expr">318 + x + 182</span> при <span class="expr">x = 59</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Найдите значение выражения:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">3 см 4 мм · 5</span>;</div>
+            <div>б) <span class="expr">4 ц 6 кг · 8</span>.</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Вычислите:</span>
+          <div class="subtasks">
+            <div><span class="expr">2072 : 37 + (2626 − 2419) · 27</span></div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Вычислите:</span>
+          <div class="subtasks">
+            <div><span class="expr">1058 : (5244 : 19 : 12)</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

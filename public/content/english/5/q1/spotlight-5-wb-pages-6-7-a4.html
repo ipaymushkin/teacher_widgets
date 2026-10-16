@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotlight 5 WB — страницы 6–7</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .print-hint {
+      margin: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3mm;
+      width: 297mm;
+      height: 210mm;
+      margin: 0 auto;
+      padding: 4mm;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .page img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      .print-hint {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="print-hint">
+    Печать: A4, альбомная ориентация, масштаб 100%, поля «Нет».
+  </p>
+
+  <main class="sheet">
+    <section class="page" aria-label="Страница 6 рабочей тетради">
+      <img
+        src="spotlight-5-wb-assets/pdf-page-7.png"
+        alt="Spotlight 5 Workbook, страница 6"
+      >
+    </section>
+
+    <section class="page" aria-label="Страница 7 рабочей тетради">
+      <img
+        src="spotlight-5-wb-assets/pdf-page-8.png"
+        alt="Spotlight 5 Workbook, страница 7"
+      >
+    </section>
+  </main>
+</body>
+</html>

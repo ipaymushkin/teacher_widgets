@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контрольная работа по математике — 2 варианта</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 13pt;
+      line-height: 1.22;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+      min-height: 190mm;
+    }
+
+    .variant {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2mm 8mm 0;
+    }
+
+    .variant:first-child {
+      border-right: 1px dashed #888;
+    }
+
+    h1 {
+      margin: 0 0 4mm;
+      text-align: center;
+      font-size: 17pt;
+      font-weight: 700;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 8mm;
+    }
+
+    li {
+      margin: 0 0 3mm;
+      padding-left: 1.5mm;
+      break-inside: avoid;
+    }
+
+    .subtasks {
+      margin-top: 1.5mm;
+    }
+
+    .subtasks div {
+      margin: 1mm 0;
+    }
+
+    .number {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .comparison {
+      margin-top: 3mm;
+      text-align: center;
+      font-size: 15pt;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    .sign-box {
+      display: inline-block;
+      width: 12mm;
+      height: 8mm;
+      margin: 0 3mm;
+      vertical-align: middle;
+      border: 1.5px solid #000;
+    }
+
+    @media screen {
+      body {
+        background: #ddd;
+      }
+
+      .sheet {
+        width: 297mm;
+        min-height: 210mm;
+        margin: 12px auto;
+        padding: 10mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="variant">
+      <h1>Вариант 1</h1>
+      <ol>
+        <li>
+          На координатной прямой покажите сложение чисел:
+          <div class="subtasks">
+            <div>а) <span class="number">7 + 9;</span></div>
+            <div>б) <span class="number">9 + 7.</span></div>
+          </div>
+        </li>
+
+        <li>
+          Вычислите наиболее удобным способом:
+          <div class="subtasks">
+            <div>а) <span class="number">(3757 + 3939) + 4061;</span></div>
+            <div>б) <span class="number">(34 271 + 20 001) + 49 999.</span></div>
+          </div>
+        </li>
+
+        <li>
+          Три брата собирали морковь. Первый брат собрал 220 кг моркови,
+          второй — на 40 кг больше, чем первый, а оба вместе собрали на
+          270 кг больше, чем третий брат. Сколько килограммов моркови было
+          собрано?
+        </li>
+
+        <li>
+          Разложите по разрядным слагаемым числа:
+          <div class="subtasks">
+            <div>а) <span class="number">38 407;</span></div>
+            <div>б) <span class="number">607 975 019 427.</span></div>
+          </div>
+        </li>
+
+        <li>
+          Сравните суммы. Поставьте знак <b>&gt;</b>, <b>&lt;</b> или <b>=</b>.
+          <div class="comparison">
+            <span class="number">506 + 961</span>
+            <span class="sign-box"></span>
+            <span class="number">459 + 883</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="variant">
+      <h1>Вариант 2</h1>
+      <ol>
+        <li>
+          На координатной прямой покажите сложение чисел:
+          <div class="subtasks">
+            <div>а) <span class="number">7 + 5;</span></div>
+            <div>б) <span class="number">7 + 7.</span></div>
+          </div>
+        </li>
+
+        <li>
+          Вычислите наиболее удобным способом:
+          <div class="subtasks">
+            <div>а) <span class="number">18 699 + (7701 + 13 600);</span></div>
+            <div>б) <span class="number">17 212 + (2788 + 1465).</span></div>
+          </div>
+        </li>
+
+        <li>
+          На трёх полках шкафа стоят книги. На первой полке на 12 книг
+          больше, чем на второй, на третьей — на 7 книг больше, чем на
+          второй. Сколько книг в шкафу, если самое маленькое количество
+          книг на полке равно 14?
+        </li>
+
+        <li>
+          Разложите по разрядным слагаемым числа:
+          <div class="subtasks">
+            <div>а) <span class="number">882 735;</span></div>
+            <div>б) <span class="number">5 021 020.</span></div>
+          </div>
+        </li>
+
+        <li>
+          Сравните суммы. Поставьте знак <b>&gt;</b>, <b>&lt;</b> или <b>=</b>.
+          <div class="comparison">
+            <span class="number">459 + 883</span>
+            <span class="sign-box"></span>
+            <span class="number">506 + 961</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

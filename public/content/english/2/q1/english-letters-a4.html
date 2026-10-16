@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>English worksheet: missing letters &amp; tracing (A4 landscape, 2-up)</title>
+
+<!-- Handwriting font for the words (loads when online); local fallbacks are used offline. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap">
+
+<style>
+  @page { size: A4 landscape; margin: 0; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    font-family: "Edu QLD Beginner", "Segoe Print", "Comic Sans MS", cursive;
+    color: #1b1b1b;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- sheet: A4 landscape split into two identical halves ---------- */
+  .sheet {
+    width: 297mm;
+    height: 209.5mm;   /* a hair under A4 height so print never spills to page 2 */
+    display: flex;
+    overflow: hidden;
+  }
+
+  .half {
+    width: 50%;
+    height: 100%;
+    padding: 7mm 6mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .half:first-child { border-right: 1px dashed #c9c9c9; }  /* cut line */
+
+  @media screen {
+    body { background: #eceff1; padding: 8mm 0; }
+    .sheet { margin: 0 auto; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,.2); }
+  }
+
+  /* ---------- header ---------- */
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 9.5pt;
+    color: #555;
+    margin-bottom: 3mm;
+  }
+  .head .fill { display: inline-block; width: 28mm; border-bottom: 1px solid #aaa; }
+
+  /* ---------- tasks ---------- */
+  .task { margin-bottom: 3mm; }
+  .task:last-child { margin-bottom: 0; }
+
+  .task-h {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    font-size: 11pt;
+    font-weight: 700;
+    margin-bottom: 2mm;
+  }
+  .task-h .num {
+    flex: 0 0 auto;
+    width: 5.2mm; height: 5.2mm;
+    border: 1.2px solid #333;
+    border-radius: 50%;
+    font-size: 8.5pt;
+    line-height: 4.8mm;
+    text-align: center;
+  }
+  .task-h .ru { font-size: 8pt; font-weight: 400; color: #808080; }
+
+  /* ---------- tasks 1 & 3: write the missing first letter ---------- */
+  .words {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4mm;
+    row-gap: 1.5mm;
+  }
+  .w {
+    height: 8.5mm;
+    font-size: 17pt;
+    letter-spacing: .4pt;
+    white-space: nowrap;
+  }
+  .w .blank {
+    display: inline-block;
+    width: 8mm;
+    margin-right: 1mm;
+    border-bottom: 2.2px solid #222;
+  }
+
+  /* ---------- task 2: tracing rows ---------- */
+  .row { display: block; width: 100%; height: 9.1mm; }
+
+  .guides line { stroke: #cfcfcf; stroke-width: 1.6; }
+  .guides .mid  { stroke: #d8d8d8; stroke-dasharray: 10 8; }
+  .guides .base { stroke: #8e8e8e; stroke-width: 2.2; }
+
+  /* first letter of the row: already written */
+  .ink path   { fill: none; stroke: #232323; stroke-width: 4.2; stroke-linecap: round; stroke-linejoin: round; }
+  .ink circle { fill: #232323; }
+
+  /* letters to trace over: dotted single-stroke lines */
+  .trace path {
+    fill: none;
+    stroke: #9a9a9a;
+    stroke-width: 3.8;
+    stroke-dasharray: 9 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .trace circle { fill: #9a9a9a; }
+
+  noscript .warn {
+    display: block; padding: 4mm; font: 12pt/1.4 sans-serif; color: #b00;
+  }
+</style>
+</head>
+<body>
+
+<noscript><span class="warn">Открой файл в браузере (Chrome/Edge) — страница собирается скриптом при загрузке.</span></noscript>
+
+<div class="sheet" id="sheet"></div>
+
+<script>
+/* =======================================================================
+   Content — edit these three lists to make a new variant of the sheet.
+   Words are printed without their FIRST letter; a blank goes in its place.
+   ======================================================================= */
+const TASK1_WORDS = ['flag', 'cat', 'egg', 'dog', 'ant', 'horse', 'bed', 'glass'];
+const TASK3_WORDS = ['house', 'lamp', 'jug', 'ink', 'kangaroo', 'nest', 'pin', 'orange'];
+
+/* letter, how many copies per row (1st one is solid, the rest are dotted) */
+const TRACE_ROWS = [
+  ['i', 17], ['j', 16], ['k', 14], ['l', 17], ['m', 12],
+  ['n', 14], ['o', 14], ['p', 14], ['q', 13]
+];
+
+/* =======================================================================
+   Single-stroke lowercase alphabet (beginner print style).
+   Row coordinate system, 100 units tall:
+     y=10  ascender line      y=33  x-height line
+     y=78  baseline           y=98  descender line
+   w = advance width of the letter, s = strokes, d = dots
+   ======================================================================= */
+const GLYPHS = {
+  i: { w: 22, s: ['M11,33 L11,78'], d: [[11, 21]] },
+  j: { w: 26, s: ['M15,33 L15,86 Q15,97 4,96'], d: [[15, 21]] },
+  k: { w: 38, s: ['M10,10 L10,78', 'M33,44 L12,62', 'M19,55 L35,78'] },
+  l: { w: 20, s: ['M10,10 L10,78'] },
+  m: { w: 58, s: ['M6,33 L6,78', 'M6,45 Q7,33 18,33 Q29,33 29,46 L29,78', 'M29,45 Q30,33 41,33 Q52,33 52,46 L52,78'] },
+  n: { w: 35, s: ['M6,33 L6,78', 'M6,45 Q7,33 18,33 Q29,33 29,46 L29,78'] },
+  o: { w: 36, s: ['M18,33 A16.5,22.5 0 1 0 18,78 A16.5,22.5 0 1 0 18,33'] },
+  p: { w: 36, s: ['M6,33 L6,98', 'M6,38 Q6,33 18,33 Q33,33 33,50 Q33,67 18,67 Q6,67 6,62'] },
+  q: { w: 43, s: ['M32,38 Q32,33 20,33 Q5,33 5,50 Q5,67 20,67 Q32,67 32,62', 'M32,33 L32,92 Q32,98 41,97'] }
+};
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const ROW_W = 1500;          // viewBox width (matches 136.5mm of usable width)
+const X_START = 20, X_END = 1480;
+
+function el(name, attrs, parent) {
+  const node = document.createElementNS(SVG_NS, name);
+  for (const k in attrs) node.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(node);
+  return node;
+}
+
+function glyph(ch, x, solid) {
+  const g = GLYPHS[ch];
+  const group = el('g', { transform: 'translate(' + x + ',0)', class: solid ? 'ink' : 'trace' });
+  g.s.forEach(d => el('path', { d: d }, group));
+  (g.d || []).forEach(p => el('circle', { cx: p[0], cy: p[1], r: solid ? 3.2 : 3 }, group));
+  return group;
+}
+
+function traceRow(ch, count) {
+  const svg = el('svg', { class: 'row', viewBox: '0 0 ' + ROW_W + ' 100' });
+
+  const guides = el('g', { class: 'guides' }, svg);
+  el('line', { x1: 0, y1: 10, x2: ROW_W, y2: 10 }, guides);
+  el('line', { class: 'mid', x1: 0, y1: 33, x2: ROW_W, y2: 33 }, guides);
+  el('line', { class: 'base', x1: 0, y1: 78, x2: ROW_W, y2: 78 }, guides);
+
+  const step = (X_END - X_START - GLYPHS[ch].w) / (count - 1);
+  for (let i = 0; i < count; i++) svg.appendChild(glyph(ch, X_START + i * step, i === 0));
+  return svg;
+}
+
+function taskHeader(num, en, ru) {
+  const h = document.createElement('div');
+  h.className = 'task-h';
+  h.innerHTML = '<span class="num">' + num + '</span><span>' + en + '</span><span class="ru">' + ru + '</span>';
+  return h;
+}
+
+function wordTask(num, words) {
+  const s = document.createElement('section');
+  s.className = 'task';
+  s.appendChild(taskHeader(num, 'Write the missing letter.', 'Напиши пропущенную букву'));
+  const grid = document.createElement('div');
+  grid.className = 'words';
+  grid.innerHTML = words
+    .map(w => '<div class="w"><span class="blank"></span>' + w.slice(1) + '</div>')
+    .join('');
+  s.appendChild(grid);
+  return s;
+}
+
+function traceTask(num) {
+  const s = document.createElement('section');
+  s.className = 'task';
+  s.appendChild(taskHeader(num, 'Trace the letters.', 'Обведи буквы'));
+  TRACE_ROWS.forEach(r => s.appendChild(traceRow(r[0], r[1])));
+  return s;
+}
+
+function buildHalf() {
+  const half = document.createElement('div');
+  half.className = 'half';
+  half.innerHTML = '<div class="head"><span>English &middot; letters</span>' +
+                   '<span>Name: <span class="fill"></span></span></div>';
+  half.appendChild(wordTask(1, TASK1_WORDS));
+  half.appendChild(traceTask(2));
+  half.appendChild(wordTask(3, TASK3_WORDS));
+  return half;
+}
+
+const sheet = document.getElementById('sheet');
+sheet.appendChild(buildHalf());
+sheet.appendChild(buildHalf());
+</script>
+
+</body>
+</html>

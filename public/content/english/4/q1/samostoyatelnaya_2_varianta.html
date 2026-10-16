@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Independent Work — 2 Variants</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 12mm; /* safe margin for non-borderless printers */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: #fff;
+      color: #111;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    .sheet {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+      page-break-after: always;
+      break-after: page;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .sheet:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+
+    @media screen {
+      body { padding: 16px; background: #dcdcdc; }
+      .sheet {
+        width: 297mm;
+        height: 210mm;
+        padding: 12mm;
+        margin: 0 auto 18px;
+        background: #fff;
+        box-shadow: 0 2px 14px rgba(0,0,0,.2);
+      }
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      .sheet {
+        width: 100%;
+        height: 186mm; /* 210mm − 12mm − 12mm */
+        overflow: hidden;
+      }
+    }
+
+    .header {
+      flex: 0 0 auto;
+      border: 1.2pt solid #222;
+      padding: 1.8mm 2.5mm;
+      display: grid;
+      grid-template-columns: 1.5fr 0.9fr 0.7fr;
+      gap: 1.5mm 3mm;
+      align-items: end;
+      font-size: 9.5pt;
+      line-height: 1.2;
+    }
+
+    .title {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 3mm;
+      border-bottom: 1pt solid #222;
+      padding-bottom: 1.2mm;
+      margin-bottom: 0.8mm;
+    }
+
+    .title h1 {
+      font-size: 12pt;
+      font-weight: 700;
+    }
+
+    .title .meta {
+      font-size: 8.5pt;
+      white-space: nowrap;
+    }
+
+    .field {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5mm;
+      min-width: 0;
+    }
+
+    .field label { font-weight: 600; white-space: nowrap; }
+    .field .line {
+      flex: 1;
+      border-bottom: 1pt dotted #333;
+      min-height: 3.5mm;
+    }
+
+    .pages {
+      flex: 1 1 auto;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2mm;
+      height: 100%;
+    }
+
+    .col {
+      border: 0.5pt solid #aaa;
+      overflow: hidden;
+      background: #fff;
+      min-height: 0;
+    }
+
+    .col img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: top center;
+      display: block;
+    }
+
+    .hint {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      background: #111;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="hint no-print">Ctrl+P · A4 · Landscape · margins ≥ 12 mm · 2 pages</div>
+
+  <section class="sheet">
+    <header class="header">
+      <div class="title">
+        <h1>Independent Work — Variant 1</h1>
+        <div class="meta">Modular Test 1 A (Units 1–2) · pp. 4–6</div>
+      </div>
+      <div class="field"><label>Name</label><span class="line"></span></div>
+      <div class="field"><label>Class</label><span class="line"></span></div>
+      <div class="field"><label>Date</label><span class="line"></span></div>
+    </header>
+    <div class="pages">
+      <div class="col"><img src="img/v1_c1.jpg" alt="Variant 1 — tasks 1–2" /></div>
+      <div class="col"><img src="img/v1_c2.jpg" alt="Variant 1 — tasks 3–5" /></div>
+      <div class="col"><img src="img/v1_c3.jpg" alt="Variant 1 — tasks 6–7" /></div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <header class="header">
+      <div class="title">
+        <h1>Independent Work — Variant 2</h1>
+        <div class="meta">Modular Test 1 B (Units 1–2) · pp. 7–9</div>
+      </div>
+      <div class="field"><label>Name</label><span class="line"></span></div>
+      <div class="field"><label>Class</label><span class="line"></span></div>
+      <div class="field"><label>Date</label><span class="line"></span></div>
+    </header>
+    <div class="pages">
+      <div class="col"><img src="img/v2_c1.jpg" alt="Variant 2 — tasks 1–2" /></div>
+      <div class="col"><img src="img/v2_c2.jpg" alt="Variant 2 — tasks 3–5" /></div>
+      <div class="col"><img src="img/v2_c3.jpg" alt="Variant 2 — tasks 6–7" /></div>
+    </div>
+  </section>
+</body>
+</html>

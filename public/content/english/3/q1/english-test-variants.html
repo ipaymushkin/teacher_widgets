@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotlight 3 — контрольная работа, 2 варианта</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #e9e9e9; color: #111; }
+    body { font-family: Arial, Helvetica, sans-serif; font-size: 9.5pt; line-height: 1.14; }
+    .sheet {
+      width: 281mm;
+      height: 194mm;
+      margin: 8mm auto;
+      padding: 5mm 7mm 4mm;
+      background: #fff;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 2.5mm;
+      overflow: hidden;
+      break-after: page;
+      page-break-after: always;
+    }
+    .sheet:last-child { break-after: auto; page-break-after: auto; }
+    .header {
+      display: grid;
+      grid-template-columns: 56mm 1fr;
+      align-items: stretch;
+      gap: 6mm;
+    }
+    .title {
+      background: #fff;
+      color: #111;
+      border: 1.4px solid #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2mm;
+      font-size: 15pt;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+    .student {
+      border: 1.4px solid #111;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5mm 8mm;
+      padding: 2mm 4mm;
+      font-size: 8.5pt;
+      font-weight: 700;
+    }
+    .field { display: flex; align-items: end; gap: 2mm; }
+    .field-line { flex: 1; border-bottom: 1px dotted #333; height: 4mm; }
+    .time { grid-column: 2; text-align: right; font-weight: 400; }
+    .content {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 6mm;
+      min-height: 0;
+    }
+    .column { display: flex; flex-direction: column; gap: 1mm; min-width: 0; }
+    .section {
+      border: 1px solid #555;
+      border-radius: 2mm;
+      padding: 2mm 2.5mm;
+      break-inside: avoid;
+    }
+    .section h2 {
+      margin: 0 0 1.2mm;
+      font-size: 10.5pt;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 1mm;
+    }
+    .marks { font-size: 8.5pt; font-weight: 400; white-space: nowrap; }
+    .instruction { margin: 0 0 1.2mm; font-weight: 700; }
+    .word-example {
+      display: grid;
+      grid-template-columns: 8mm 15mm 1fr 20mm;
+      gap: 2mm;
+      align-items: center;
+      margin-bottom: 1mm;
+      color: #555;
+      font-size: 9pt;
+    }
+    .word-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1mm 4mm;
+    }
+    .word-item {
+      display: grid;
+      grid-template-columns: 6mm 16mm 1fr 20mm;
+      gap: 2mm;
+      align-items: center;
+      min-height: 11mm;
+    }
+    .num { font-weight: 700; }
+    .icon {
+      width: 13mm;
+      height: 10mm;
+      color: #222;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .source-icon {
+      width: 15mm;
+      height: 13mm;
+      object-fit: contain;
+      filter: grayscale(1) contrast(1.08);
+    }
+    .answer { border-bottom: 1.2px dashed #333; height: 5mm; }
+    .letters {
+      border: 1px solid #555;
+      border-radius: 50%;
+      width: 14mm;
+      height: 14mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font: 700 8.5pt/1.05 "Courier New", monospace;
+      letter-spacing: 1px;
+      padding: 1mm;
+    }
+    .letter-photo {
+      width: 14mm;
+      height: 14mm;
+      object-fit: contain;
+      filter: grayscale(1) contrast(1.08);
+    }
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2mm;
+      text-align: center;
+      margin: 0;
+    }
+    .number-card {
+      height: 8mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .number-photo {
+      max-width: 100%;
+      height: 8mm;
+      object-fit: contain;
+      filter: grayscale(1) contrast(1.08);
+    }
+    .write-lines {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8mm 5mm;
+    }
+    .write-row { display: flex; gap: 2mm; align-items: end; }
+    .write-row .answer { flex: 1; }
+    .choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.3mm 6mm;
+    }
+    .choice { display: grid; grid-template-columns: 6mm 1fr; gap: 1mm; }
+    .choice p { margin: 0 0 .5mm; }
+    .choice-label { font-weight: 700; }
+    .questions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5mm 6mm;
+    }
+    .question p { margin: 0 0 .5mm; font-weight: 700; }
+    .ruled { height: 4mm; border-bottom: 1px dotted #333; }
+    .reading {
+      border: 1.4px solid #111;
+      border-radius: 4mm 1mm 4mm 1mm;
+      padding: 2mm 3mm;
+    }
+    .reading p { margin: 0 0 1.2mm; }
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2mm;
+      margin: 1mm 0;
+    }
+    .subjects.three { grid-template-columns: repeat(3, 1fr); }
+    .subject {
+      display: grid;
+      grid-template-columns: 6mm 14mm 1fr auto;
+      gap: 1mm;
+      align-items: center;
+    }
+    .subject .icon { width: 11mm; height: 9mm; }
+    .subject-photo {
+      width: 13mm;
+      height: 11mm;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.08);
+    }
+    .favorite-subject {
+      display: inline-grid;
+      grid-template-columns: 6mm 14mm 36mm;
+      gap: 1mm;
+      align-items: center;
+      vertical-align: middle;
+      margin-left: 1mm;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #555;
+      padding-top: 1mm;
+      font-size: 8.5pt;
+    }
+    .score {
+      display: grid;
+      grid-template-columns: auto 18mm 12mm;
+      border: 1px solid #111;
+      font-size: 10pt;
+      font-weight: 700;
+    }
+    .score span { padding: 1.5mm 2mm; border-right: 1px solid #111; text-align: center; }
+    .score span:last-child { border-right: 0; }
+    .small { font-size: 8.5pt; }
+    .example { color: #555; font-size: 9pt; }
+    svg.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    @page { size: A4 landscape; margin: 8mm; }
+    @media print {
+      html, body { background: #fff; }
+      .sheet {
+        width: 281mm;
+        height: 194mm;
+        margin: 0;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+    @media screen {
+      .sheet { box-shadow: 0 2mm 7mm rgba(0,0,0,.18); }
+    }
+  </style>
+</head>
+<body>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="pencil" viewBox="0 0 64 48"><path d="M8 40l5-14L43 3l12 12-30 23z"/><path d="M13 26l12 12M43 3l12 12M8 40l10-3-7-7z"/></symbol>
+      <symbol id="ruler" viewBox="0 0 64 48"><path d="M5 30L47 5l10 16-42 25z"/><path d="M17 28l5 7m2-12l3 5m4-10l5 7m2-12l3 5m4-10l5 7"/></symbol>
+      <symbol id="case" viewBox="0 0 64 48"><path d="M9 17h46a5 5 0 015 5v14a5 5 0 01-5 5H9a5 5 0 01-5-5V22a5 5 0 015-5z"/><path d="M13 17l5-8h28l5 8M8 29h48"/></symbol>
+      <symbol id="eraser" viewBox="0 0 64 48"><path d="M7 29L32 8l24 12-25 21H12z"/><path d="M22 40l25-21"/></symbol>
+      <symbol id="school" viewBox="0 0 64 48"><path d="M6 42h52M10 42V18h44v24M7 18L32 5l25 13M27 42V29h10v13M15 23h7v7h-7zm27 0h7v7h-7z"/></symbol>
+      <symbol id="book" viewBox="0 0 64 48"><path d="M7 9h22a7 7 0 017 7v26a9 9 0 00-9-7H7z"/><path d="M57 9H43a7 7 0 00-7 7v26a9 9 0 019-7h12z"/></symbol>
+      <symbol id="bag" viewBox="0 0 64 48"><path d="M14 16h36a6 6 0 016 6v21H8V22a6 6 0 016-6z"/><path d="M23 16V9h18v7M18 25h28v12H18zM8 29h10m28 0h10"/></symbol>
+      <symbol id="globe" viewBox="0 0 64 48"><circle cx="30" cy="21" r="17"/><path d="M13 21h34M30 4c11 10 11 24 0 34M30 4c-11 10-11 24 0 34M30 38v7M20 45h20"/></symbol>
+      <symbol id="music" viewBox="0 0 64 48"><path d="M24 34V9l27-5v25M24 14l27-5"/><ellipse cx="17" cy="36" rx="8" ry="5"/><ellipse cx="44" cy="31" rx="8" ry="5"/></symbol>
+      <symbol id="history" viewBox="0 0 64 48"><path d="M5 42h54M10 38h44M14 15h36M10 12L32 3l22 9zM17 15v23m10-23v23m10-23v23m10-23v23"/></symbol>
+      <symbol id="art" viewBox="0 0 64 48"><path d="M34 5C18 5 6 15 6 28c0 9 7 14 15 14h7c4 0 6-3 4-7-2-5 1-8 6-7l7 1c8 1 13-4 11-10C53 10 44 5 34 5z"/><circle cx="19" cy="21" r="2"/><circle cx="28" cy="14" r="2"/><circle cx="39" cy="14" r="2"/><circle cx="47" cy="20" r="2"/></symbol>
+      <symbol id="science" viewBox="0 0 64 48"><path d="M24 5h16M28 5v13L12 42h40L36 18V5M20 31h24"/><circle cx="27" cy="35" r="2"/><circle cx="37" cy="27" r="2"/></symbol>
+      <symbol id="pe" viewBox="0 0 64 48"><circle cx="32" cy="24" r="20"/><path d="M32 4l8 8-3 10-10 2-7-8 4-9M12 22l8-6m-2 22l9-14m15 14l-5-16m15 0l-12-10"/></symbol>
+    </defs>
+  </svg>
+
+  <main class="sheet">
+    <header class="header">
+      <div class="title">CONTROL TEST<br>Variant 1</div>
+      <div class="student">
+        <div class="field">NAME: <span class="field-line"></span></div>
+        <div class="field">DATE: <span class="field-line"></span></div>
+        <div class="field">CLASS: <span class="field-line"></span></div>
+        <div class="field">MARK: <span class="field-line"></span></div>
+        <div class="time">Time: 40 minutes</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="column">
+        <section class="section">
+          <h2>Vocabulary <span class="marks">40 marks</span></h2>
+          <p class="instruction">1. Look and write. <span class="small">(10 marks)</span></p>
+          <div class="word-example"><b>e.g.</b><img class="source-icon" src="english-test-assets/pen.png" alt=""><span><u>pen</u></span><img class="letter-photo" src="english-test-assets/v1-letters-example.png" alt=""></div>
+          <div class="word-grid">
+            <div class="word-item"><span class="num">1</span><img class="source-icon" src="english-test-assets/v1-ruler.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v1-letters-1.png" alt=""></div>
+            <div class="word-item"><span class="num">2</span><img class="source-icon" src="english-test-assets/v1-pencil.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v1-letters-2.png" alt=""></div>
+            <div class="word-item"><span class="num">3</span><img class="source-icon" src="english-test-assets/v1-case.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v1-letters-3.png" alt=""></div>
+            <div class="word-item"><span class="num">4</span><img class="source-icon" src="english-test-assets/v1-eraser.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v1-letters-4.png" alt=""></div>
+            <div class="word-item"><span class="num">5</span><img class="source-icon" src="english-test-assets/v1-school.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v1-letters-5.png" alt=""></div>
+          </div>
+          <p class="instruction" style="margin-top:2mm">2. Look and write. <span class="small">(30 marks)</span></p>
+          <div class="numbers">
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-1.png" alt="5"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-2.png" alt="19"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-3.png" alt="3"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-4.png" alt="8"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-5.png" alt="14"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v1-number-6.png" alt="13"></div>
+          </div>
+          <div class="write-lines">
+            <div class="write-row"><b>1</b><span class="answer"></span></div><div class="write-row"><b>4</b><span class="answer"></span></div>
+            <div class="write-row"><b>2</b><span class="answer"></span></div><div class="write-row"><b>5</b><span class="answer"></span></div>
+            <div class="write-row"><b>3</b><span class="answer"></span></div><div class="write-row"><b>6</b><span class="answer"></span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Grammar <span class="marks">20 marks</span></h2>
+          <p class="instruction">3. Read and choose.</p>
+          <div class="choices">
+            <div class="choice"><span class="choice-label">1</span><div><p>A This is my pet, Fluffy.</p><p>B This my pet, Fluffy.</p></div></div>
+            <div class="choice"><span class="choice-label">2</span><div><p>A What your name?</p><p>B What’s your name?</p></div></div>
+            <div class="choice"><span class="choice-label">3</span><div><p>A It’s a pencil case.</p><p>B It a pencil case.</p></div></div>
+            <div class="choice"><span class="choice-label">4</span><div><p>A My name’s Jim.</p><p>B My name Jim.</p></div></div>
+            <div class="choice"><span class="choice-label">5</span><div><p>A What this?</p><p>B What’s this?</p></div></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section">
+          <h2>Communication <span class="marks">20 marks</span></h2>
+          <p class="instruction">4. Read and answer about yourself.</p>
+          <div class="questions">
+            <div class="question"><p>1. What’s your name?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>2. How old are you?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>3. What year are you in at school?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>4. What’s your favourite subject?</p><div class="ruled"></div><div class="ruled"></div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Reading and Writing <span class="marks">20 marks</span></h2>
+          <p class="instruction">5. Read and write the names of the school subjects.</p>
+          <div class="reading">
+            <p>Hello,</p>
+            <p>My name’s John. I’m in year 5 at school. I like <span class="example">e.g. <b>Maths</b></span>,</p>
+            <div class="subjects three">
+              <div class="subject"><b>1</b><img class="subject-photo" src="english-test-assets/geography.png" alt=""><span class="answer"></span><span>,</span></div>
+              <div class="subject"><b>2</b><img class="subject-photo" src="english-test-assets/music-v1.png" alt=""><span class="answer"></span><span>and</span></div>
+              <div class="subject"><b>3</b><img class="subject-photo" src="english-test-assets/history-v1.png" alt=""><span class="answer"></span></div>
+            </div>
+            <p>but my favourite subject is <span class="favorite-subject"><b>4</b><img class="subject-photo" src="english-test-assets/art.png" alt=""><span class="answer"></span></span>.</p>
+            <p>What about you?</p>
+            <p>John</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Spotlight 3 · Units 1–2 · Variant 1</span>
+      <div class="score"><span>TOTAL</span><span></span><span>100</span></div>
+    </footer>
+  </main>
+
+  <main class="sheet">
+    <header class="header">
+      <div class="title">CONTROL TEST<br>Variant 2</div>
+      <div class="student">
+        <div class="field">NAME: <span class="field-line"></span></div>
+        <div class="field">DATE: <span class="field-line"></span></div>
+        <div class="field">CLASS: <span class="field-line"></span></div>
+        <div class="field">MARK: <span class="field-line"></span></div>
+        <div class="time">Time: 40 minutes</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="column">
+        <section class="section">
+          <h2>Vocabulary <span class="marks">40 marks</span></h2>
+          <p class="instruction">1. Look and write. <span class="small">(10 marks)</span></p>
+          <div class="word-example"><b>e.g.</b><img class="source-icon" src="english-test-assets/pen.png" alt=""><span><u>pen</u></span><img class="letter-photo" src="english-test-assets/v2-letters-example.png" alt=""></div>
+          <div class="word-grid">
+            <div class="word-item"><span class="num">1</span><img class="source-icon" src="english-test-assets/v2-school.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v2-letters-1.png" alt=""></div>
+            <div class="word-item"><span class="num">2</span><img class="source-icon" src="english-test-assets/v2-eraser.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v2-letters-2.png" alt=""></div>
+            <div class="word-item"><span class="num">3</span><img class="source-icon" src="english-test-assets/v2-book.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v2-letters-3.png" alt=""></div>
+            <div class="word-item"><span class="num">4</span><img class="source-icon" src="english-test-assets/v2-ruler.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v2-letters-4.png" alt=""></div>
+            <div class="word-item"><span class="num">5</span><img class="source-icon" src="english-test-assets/v2-bag.png" alt=""><span class="answer"></span><img class="letter-photo" src="english-test-assets/v2-letters-5.png" alt=""></div>
+          </div>
+          <p class="instruction" style="margin-top:2mm">2. Look and write. <span class="small">(30 marks)</span></p>
+          <div class="numbers">
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-1.png" alt="6"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-2.png" alt="18"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-3.png" alt="4"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-4.png" alt="9"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-5.png" alt="15"></div>
+            <div class="number-card"><img class="number-photo" src="english-test-assets/v2-number-6.png" alt="20"></div>
+          </div>
+          <div class="write-lines">
+            <div class="write-row"><b>1</b><span class="answer"></span></div><div class="write-row"><b>4</b><span class="answer"></span></div>
+            <div class="write-row"><b>2</b><span class="answer"></span></div><div class="write-row"><b>5</b><span class="answer"></span></div>
+            <div class="write-row"><b>3</b><span class="answer"></span></div><div class="write-row"><b>6</b><span class="answer"></span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Grammar <span class="marks">20 marks</span></h2>
+          <p class="instruction">3. Read and choose.</p>
+          <div class="choices">
+            <div class="choice"><span class="choice-label">1</span><div><p>A What this?</p><p>B What’s this?</p></div></div>
+            <div class="choice"><span class="choice-label">2</span><div><p>A My name’s Larry.</p><p>B My name Larry.</p></div></div>
+            <div class="choice"><span class="choice-label">3</span><div><p>A This my pet, Max.</p><p>B This is my pet, Max.</p></div></div>
+            <div class="choice"><span class="choice-label">4</span><div><p>A What’s your name?</p><p>B What your name?</p></div></div>
+            <div class="choice"><span class="choice-label">5</span><div><p>A It’s a school bag.</p><p>B It a school bag.</p></div></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section class="section">
+          <h2>Communication <span class="marks">20 marks</span></h2>
+          <p class="instruction">4. Read and answer about yourself.</p>
+          <div class="questions">
+            <div class="question"><p>1. What’s your name?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>2. How old are you?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>3. What year are you in at school?</p><div class="ruled"></div><div class="ruled"></div></div>
+            <div class="question"><p>4. What’s your favourite subject?</p><div class="ruled"></div><div class="ruled"></div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Reading and Writing <span class="marks">20 marks</span></h2>
+          <p class="instruction">5. Read and write the names of the school subjects.</p>
+          <div class="reading">
+            <p>Hello,</p>
+            <p>My name’s Lin. I’m in year 6 at school. I like <span class="example">e.g. <b>Maths</b></span>,</p>
+            <div class="subjects three">
+              <div class="subject"><b>1</b><img class="subject-photo" src="english-test-assets/science.png" alt=""><span class="answer"></span><span>,</span></div>
+              <div class="subject"><b>2</b><img class="subject-photo" src="english-test-assets/music-v2.png" alt=""><span class="answer"></span><span>and</span></div>
+              <div class="subject"><b>3</b><img class="subject-photo" src="english-test-assets/pe.png" alt=""><span class="answer"></span></div>
+            </div>
+            <p>but my favourite subject is <span class="favorite-subject"><b>4</b><img class="subject-photo" src="english-test-assets/history-v2.png" alt=""><span class="answer"></span></span>.</p>
+            <p>What about you?</p>
+            <p>Lin</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Spotlight 3 · Units 1–2 · Variant 2</span>
+      <div class="score"><span>TOTAL</span><span></span><span>100</span></div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Английский алфавит — 2 экземпляра на A4</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #fff;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .print-note {
+      margin: 12px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 297mm;
+      height: 209.5mm;
+      margin: 0 auto 8mm;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .alphabet {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100%;
+      padding: 7mm 5mm 5mm;
+    }
+
+    .alphabet:first-child {
+      border-right: 0.35mm dashed #aaa;
+    }
+
+    h1 {
+      margin: 0 0 5mm;
+      text-align: center;
+      font-size: 24pt;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.4pt;
+    }
+
+    .rows {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
+    }
+
+    .letter-row {
+      display: grid;
+      align-items: start;
+      gap: 1.5mm;
+    }
+
+    .cols-5 {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .cols-6 {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.7mm;
+    }
+
+    .letter-card {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .letters {
+      margin-bottom: 1.2mm;
+      font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+      font-size: 36pt;
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -4px;
+      white-space: nowrap;
+      -webkit-text-stroke: 0.35px rgba(0, 0, 0, 0.5);
+      text-shadow: 0.5px 0.7px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .cols-6 .letters {
+      font-size: 32pt;
+    }
+
+    .sound {
+      min-height: 2.25em;
+      font-size: 10.2pt;
+      line-height: 1.12;
+      white-space: normal;
+    }
+
+    .cols-6 .sound {
+      font-size: 9.2pt;
+    }
+
+    .red    { color: #ef3340; }
+    .blue   { color: #4b91d1; }
+    .green  { color: #64b844; }
+    .orange { color: #ff8748; }
+    .cyan   { color: #52c7ca; }
+    .lime   { color: #cae800; }
+    .purple { color: #8f4196; }
+    .yellow { color: #ffbe16; }
+    .pink   { color: #ef3d71; }
+    .teal   { color: #12aaa8; }
+    .navy   { color: #3568b5; }
+    .gold   { color: #ffc400; }
+    .sky    { color: #49b9e9; }
+    .berry  { color: #c51657; }
+    .violet { color: #cf5aa4; }
+    .azure  { color: #039ad5; }
+    .olive  { color: #a9bf28; }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .print-note {
+        display: none;
+      }
+
+      .sheet {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="print-note">Печать: A4, альбомная ориентация, масштаб 100%, поля — «Нет».</p>
+
+  <main class="sheet" id="sheet" aria-label="Два одинаковых английских алфавита"></main>
+
+  <template id="alphabet-template">
+    <section class="alphabet">
+      <h1>Английский алфавит</h1>
+      <div class="rows">
+        <div class="letter-row cols-5">
+          <div class="letter-card"><div class="letters red">Aa</div><div class="sound">[eɪ] — эй</div></div>
+          <div class="letter-card"><div class="letters blue">Bb</div><div class="sound">[biː] — би</div></div>
+          <div class="letter-card"><div class="letters green">Cc</div><div class="sound">[siː] — си</div></div>
+          <div class="letter-card"><div class="letters orange">Dd</div><div class="sound">[diː] — ди</div></div>
+          <div class="letter-card"><div class="letters cyan">Ee</div><div class="sound">[iː] — и</div></div>
+        </div>
+
+        <div class="letter-row cols-6">
+          <div class="letter-card"><div class="letters lime">Ff</div><div class="sound">[ef] — эф</div></div>
+          <div class="letter-card"><div class="letters sky">Gg</div><div class="sound">[dʒiː] —<br>джи</div></div>
+          <div class="letter-card"><div class="letters purple">Hh</div><div class="sound">[eɪtʃ] —<br>эйч</div></div>
+          <div class="letter-card"><div class="letters yellow">Ii</div><div class="sound">[aɪ] — ай</div></div>
+          <div class="letter-card"><div class="letters blue">Jj</div><div class="sound">[dʒeɪ] —<br>джей</div></div>
+          <div class="letter-card"><div class="letters pink">Kk</div><div class="sound">[keɪ] — кей</div></div>
+        </div>
+
+        <div class="letter-row cols-5">
+          <div class="letter-card"><div class="letters orange">Ll</div><div class="sound">[el] — эл</div></div>
+          <div class="letter-card"><div class="letters green">Mm</div><div class="sound">[em] — эм</div></div>
+          <div class="letter-card"><div class="letters red">Nn</div><div class="sound">[en] — эн</div></div>
+          <div class="letter-card"><div class="letters yellow">Oo</div><div class="sound">[əʊ] — оу</div></div>
+          <div class="letter-card"><div class="letters green">Pp</div><div class="sound">[piː] — пи</div></div>
+        </div>
+
+        <div class="letter-row cols-5">
+          <div class="letter-card"><div class="letters pink">Qq</div><div class="sound">[kjuː] — кью</div></div>
+          <div class="letter-card"><div class="letters navy">Rr</div><div class="sound">[ɑː] — а</div></div>
+          <div class="letter-card"><div class="letters gold">Ss</div><div class="sound">[es] — эс</div></div>
+          <div class="letter-card"><div class="letters sky">Tt</div><div class="sound">[tiː] — ти</div></div>
+          <div class="letter-card"><div class="letters berry">Uu</div><div class="sound">[juː] — ю</div></div>
+        </div>
+
+        <div class="letter-row cols-5">
+          <div class="letter-card"><div class="letters orange">Vv</div><div class="sound">[viː] — ви</div></div>
+          <div class="letter-card"><div class="letters teal">Ww</div><div class="sound">[ˈdʌbəl juː] —<br>дабл-ю</div></div>
+          <div class="letter-card"><div class="letters violet">Xx</div><div class="sound">[eks] — экс</div></div>
+          <div class="letter-card"><div class="letters azure">Yy</div><div class="sound">[waɪ] — уай</div></div>
+          <div class="letter-card"><div class="letters olive">Zz</div><div class="sound">[zed] — зэд</div></div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <script>
+    const sheet = document.getElementById("sheet");
+    const template = document.getElementById("alphabet-template");
+    sheet.append(template.content.cloneNode(true), template.content.cloneNode(true));
+  </script>
+</body>
+</html>
