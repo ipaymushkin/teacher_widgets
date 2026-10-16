@@ -15,6 +15,7 @@ import { MathPage } from '@/features/works/math-page'
 import { GradeQuarters } from '@/features/works/grade-quarters'
 import { QuarterView } from '@/features/works/quarter-view'
 import { UtilitiesPage } from '@/features/utilities/utilities-page'
+import { UtilityRoute } from '@/features/utilities/utility-route'
 
 function AppShell({ children }: { children: ReactNode }) {
   return (
@@ -58,6 +59,7 @@ function App() {
           element={<QuarterView subject="english" />}
         />
         <Route path="/utilities" element={<UtilitiesPage />} />
+        <Route path="/utilities/:utilityId" element={<UtilityRoute />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AppShell>

@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Ticket } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 import {
   Card,
@@ -7,44 +6,20 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { MealTicketsForm } from '@/features/utilities/meal-tickets-form'
-
-type UtilityId = 'meal-tickets'
-
-const utilities: {
-  id: UtilityId
-  title: string
-  description: string
-  icon: typeof Ticket
-}[] = [
-  {
-    id: 'meal-tickets',
-    title: 'Генерация талонов',
-    description:
-      'Талоны на разовое питание для печати на A4 (завтрак / обед).',
-    icon: Ticket,
-  },
-]
+import { utilitiesCatalog } from '@/data/utilities-catalog'
 
 export function UtilitiesPage() {
-  const [activeUtility, setActiveUtility] = useState<UtilityId | null>(null)
-
-  if (activeUtility === 'meal-tickets') {
-    return <MealTicketsForm onBack={() => setActiveUtility(null)} />
-  }
-
   return (
     <div className="flex flex-col gap-4">
       <p className="text-sm text-muted-foreground">
         Выберите утилиту — откроется форма настройки.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {utilities.map((utility) => (
-          <button
+        {utilitiesCatalog.map((utility) => (
+          <Link
             key={utility.id}
-            type="button"
+            to={`/utilities/${utility.id}`}
             className="text-left"
-            onClick={() => setActiveUtility(utility.id)}
           >
             <Card className="h-full transition-colors hover:bg-muted/40">
               <CardHeader>
@@ -55,7 +30,7 @@ export function UtilitiesPage() {
                 <CardDescription>{utility.description}</CardDescription>
               </CardHeader>
             </Card>
-          </button>
+          </Link>
         ))}
       </div>
     </div>

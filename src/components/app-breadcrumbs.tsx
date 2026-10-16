@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { sectionTitles, type NavSection } from '@/components/app-sidebar'
+import { getUtility } from '@/data/utilities-catalog'
 import type { Grade, Quarter } from '@/data/works-catalog'
 
 type Crumb = {
@@ -17,93 +18,7 @@ type Crumb = {
   href?: string
 }
 
-function parsePath(pathname: string): {
-  section: NavSection | null
-  grade: Grade | null
-  quarter: Quarter | null
-} {
-  const parts = pathname.split('/').filter(Boolean)
-  const sectionPart = parts[0]
-  const section: NavSection | null =
-    sectionPart === 'math' ||
-    sectionPart === 'english' ||
-    sectionPart === 'utilities'
-      ? sectionPart
-      : null
-
-  if (!section || section === 'utilities') {
-    return { section, grade: null, quarter: null }
-  }
-
-  const gradeNum = Number(parts[1])
-  const grade: Grade | null =
-    gradeNum === 2 || gradeNum === 3 || gradeNum === 4 || gradeNum === 5
-      ? gradeNum
-      : null
-
-  const quarterPart = parts[2]
-  const quarter: Quarter | null =
-    quarterPart && /^q[1-4]$/.test(quarterPart)
-      ? (Number(quarterPart.slice(1)) as Quarter)
-      : null
-
-  return { section, grade, quarter }
-}
-
-export function AppBreadcrumbs() {
-  const { pathname } = useLocation()
-
-  if (pathname === '/') {
-    return (
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbPage>Главная</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-    )
-  }
-
-  const { section, grade, quarter } = parsePath(pathname)
-
-  if (!section) return null
-
-  const sectionTitle = sectionTitles[section]
-  const sectionPath = `/${section}`
-
-  if (section === 'utilities') {
-    return (
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbPage>{sectionTitle}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-    )
-  }
-
-  const crumbs: Crumb[] = [
-    {
-      label: sectionTitle,
-      href: grade || quarter ? sectionPath : undefined,
-    },
-  ]
-
-  if (grade) {
-    crumbs.push({
-      label: `${grade} класс`,
-      href: quarter ? `${sectionPath}/${grade}` : undefined,
-    })
-  }
-
-  if (quarter) {
-    crumbs.push({
-      label: `${quarter} четверть`,
-    })
-  }
-
+function renderCrumbs(crumbs: Crumb[]) {
   return (
     <Breadcrumb>
       <BreadcrumbList>
@@ -127,4 +42,82 @@ export function AppBreadcrumbs() {
       </BreadcrumbList>
     </Breadcrumb>
   )
+}
+
+function parseWorksPath(pathname: string): {
+  section: Exclude<NavSection, 'utilities'> | null
+  grade: Grade | null
+  quarter: Quarter | null
+} {
+  const parts = pathname.split('/').filter(Boolean)
+  const sectionPart = parts[0]
+  const section =
+    sectionPart === 'math' || sectionPart === 'english' ? sectionPart : null
+
+  if (!section) {
+    return { section: null, grade: null, quarter: null }
+  }
+
+  const gradeNum = Number(parts[1])
+  const grade: Grade | null =
+    gradeNum === 2 || gradeNum === 3 || gradeNum === 4 || gradeNum === 5
+      ? gradeNum
+      : null
+
+  const quarterPart = parts[2]
+  const quarter: Quarter | null =
+    quarterPart && /^q[1-4]$/.test(quarterPart)
+      ? (Number(quarterPart.slice(1)) as Quarter)
+      : null
+
+  return { section, grade, quarter }
+}
+
+export function AppBreadcrumbs() {
+  const { pathname } = useLocation()
+
+  if (pathname === '/') {
+    return renderCrumbs([{ label: 'Главная' }])
+  }
+
+  if (pathname === '/utilities' || pathname.startsWith('/utilities/')) {
+    const utilityId = pathname.split('/').filter(Boolean)[1]
+    const utility = getUtility(utilityId)
+    const crumbs: Crumb[] = [
+      {
+        label: sectionTitles.utilities,
+        href: utility ? '/utilities' : undefined,
+      },
+    ]
+    if (utility) {
+      crumbs.push({ label: utility.title })
+    }
+    return renderCrumbs(crumbs)
+  }
+
+  const { section, grade, quarter } = parseWorksPath(pathname)
+  if (!section) return null
+
+  const sectionPath = `/${section}`
+  const crumbs: Crumb[] = [
+    {
+      label: sectionTitles[section],
+      href: grade || quarter ? sectionPath : undefined,
+    },
+  ]
+
+  if (grade) {
+    crumbs.push({
+      label: `${grade} класс`,
+      href: quarter ? `${sectionPath}/${grade}` : undefined,
+    })
+  }
+
+  if (quarter) {
+    crumbs.push({
+      label: `${quarter} четверть`,
+    })
+  }
+
+  return renderCrumbs(crumbs)
 }

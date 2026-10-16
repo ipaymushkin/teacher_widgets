@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { ArrowLeft, Printer } from 'lucide-react'
+import { Printer } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -24,17 +24,13 @@ import {
   openPrintHtml,
 } from '@/lib/meal-tickets/generate'
 
-type MealTicketsFormProps = {
-  onBack: () => void
-}
-
 function getDefaultDates() {
   const from = addDays(new Date(), 1)
   const to = addMonths(from, 1)
   return { from: toInputDate(from), to: toInputDate(to) }
 }
 
-export function MealTicketsForm({ onBack }: MealTicketsFormProps) {
+export function MealTicketsForm() {
   const defaults = useMemo(() => getDefaultDates(), [])
   const [dateFrom, setDateFrom] = useState(defaults.from)
   const [dateTo, setDateTo] = useState(defaults.to)
@@ -104,13 +100,6 @@ export function MealTicketsForm({ onBack }: MealTicketsFormProps) {
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col gap-4">
-      <div className="flex items-center gap-2">
-        <Button variant="ghost" size="sm" onClick={onBack}>
-          <ArrowLeft />
-          К утилитам
-        </Button>
-      </div>
-
       <Card>
         <CardHeader>
           <CardTitle>Генерация талонов на питание</CardTitle>
