@@ -74,6 +74,8 @@ $mathFiles = @(
   'kontrolnaya-matematika.html',
   'kontrolnaya-matematika-2-varianta.html',
   'kontrolnaya-matematika-otvety.html',
+  'kontrolnaya-matematika-1256-2-varianta.html',
+  'kontrolnaya-matematika-1256-otvety.html',
   'samostoyatelnaya-matematika-2-varianta.html',
   'samostoyatelnaya-matematika-otvety.html',
   'kontrolnaya-chisloye-bukvennye.html',
@@ -136,6 +138,8 @@ foreach ($f in $ewWorks) {
 
 $catalog.Add((Copy-Work 'english' 5 (Join-Path $src 'spotlight-5-tasks-landscape.html') @('spotlight-5-assets')))
 $catalog.Add((Copy-Work 'english' 5 (Join-Path $src 'spotlight-5-wb-pages-6-7-a4.html') @('spotlight-5-wb-assets')))
+$catalog.Add((Copy-Work 'english' 5 (Join-Path $src 'spotlight-5-page-34-landscape.html') @('spotlight-5-page-34-assets')))
+$catalog.Add((Copy-Work 'english' 5 (Join-Path $src 'spotlight-5-page-34-answer-key.html') @()))
 
 $sorted = $catalog | Sort-Object subject, grade, quarter, createdAt
 $sorted | Select-Object subject, grade, quarter, path, createdAt, title | Format-Table -AutoSize

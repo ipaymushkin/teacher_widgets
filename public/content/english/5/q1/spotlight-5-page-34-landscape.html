@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spotlight 5 — страница 34 (Progress Check 1)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ddd;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hint {
+      margin: 14px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 3mm;
+      width: 297mm;
+      height: 210mm;
+      margin: 8mm auto;
+      padding: 4mm;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+    }
+
+    .page {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .page img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: top center;
+    }
+
+    .cut {
+      position: absolute;
+      top: 4mm;
+      bottom: 4mm;
+      left: 50%;
+      border-left: 0.3pt dashed #bbb;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      .hint {
+        display: none;
+      }
+
+      .sheet {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="hint">
+    Печатайте на горизонтальном листе A4, масштаб 100%, поля — «Нет». Две копии — разрезать по пунктиру.
+  </p>
+
+  <main class="sheet">
+    <div class="cut" aria-hidden="true"></div>
+
+    <section class="page" aria-label="Копия 1 — Spotlight 5, страница 34">
+      <img
+        src="spotlight-5-page-34-assets/page-34.png"
+        alt="Spotlight 5, страница 34 — задания Progress Check 1"
+      >
+    </section>
+
+    <section class="page" aria-label="Копия 2 — Spotlight 5, страница 34">
+      <img
+        src="spotlight-5-page-34-assets/page-34.png"
+        alt="Spotlight 5, страница 34 — задания Progress Check 1"
+      >
+    </section>
+  </main>
+</body>
+</html>

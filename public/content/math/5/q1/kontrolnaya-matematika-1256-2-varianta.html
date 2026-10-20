@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контрольная работа по математике</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12.5pt;
+      line-height: 1.3;
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 180mm;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin-bottom: 5mm;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 3mm;
+      font-size: 16pt;
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 4mm;
+      font-size: 11.5pt;
+      text-align: left;
+    }
+
+    .meta .line {
+      display: inline-block;
+      min-width: 55mm;
+      border-bottom: 1px solid #000;
+      vertical-align: bottom;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 7mm;
+    }
+
+    li {
+      margin: 0 0 5mm;
+      padding-left: 1mm;
+    }
+
+    .task-title {
+      font-weight: 700;
+    }
+
+    .subtasks {
+      margin-top: 1.5mm;
+    }
+
+    .subtasks div {
+      margin: 1.2mm 0;
+    }
+
+    .expr {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .space {
+      display: block;
+      height: 9mm;
+    }
+
+    .space-sm {
+      display: block;
+      height: 6mm;
+    }
+
+    @media screen {
+      body {
+        background: #ddd;
+        min-height: 100vh;
+        padding: 16px 0;
+      }
+
+      .sheet {
+        width: 210mm;
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 14mm 18mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="header">
+      <h1>Контрольная работа по математике</h1>
+      <div class="meta">
+        <span>Фамилия имя: <span class="line"></span></span>
+        <span>Класс: <span class="line" style="min-width:20mm"></span></span>
+      </div>
+    </header>
+
+    <ol>
+      <li>
+        <span class="task-title">Запишите выражение:</span>
+        <div class="subtasks">
+          <div>а) сумма 248 и <span class="expr">p − q + 32</span>;</div>
+          <div>б) разность <span class="expr">785 + 65</span> и <span class="expr">420 − 185</span>;</div>
+          <div>в) сумма <span class="expr">34 + 17</span> и <span class="expr">52 − 28</span>;</div>
+          <div>г) разность 65 и <span class="expr">a + b − 23</span>.</div>
+        </div>
+        <span class="space-sm"></span>
+      </li>
+
+      <li>
+        <span class="task-title">Составьте выражение для решения задачи и найдите его значение.</span>
+        <div class="subtasks">
+          <div>
+            а) Длина одной велодорожки равна 156 км, что на 78 км меньше длины другой велодорожки.
+            Чему равна длина двух велодорожек вместе?
+          </div>
+          <span class="space-sm"></span>
+          <div>
+            б) С одного участка собрали 64 кг яблок, что на 19 кг больше, чем с другого участка.
+            Сколько килограммов яблок собрали с двух участков вместе?
+          </div>
+        </div>
+        <span class="space"></span>
+      </li>
+
+      <li>
+        <span class="task-title">Вычислите:</span>
+        <div class="subtasks">
+          <div>а) <span class="expr">324 · 25 − (4820 + 1180) : 40</span></div>
+          <div>б) <span class="expr">288 · 25 − (5640 + 2360) : 50</span></div>
+        </div>
+        <span class="space"></span>
+      </li>
+
+      <li>
+        <span class="task-title">Вычислите:</span>
+        <div class="subtasks">
+          <div>а) <span class="expr">15 360 : 64 : (180 : 12)</span></div>
+          <div>б) <span class="expr">12 096 : 56 : (144 : 12)</span></div>
+        </div>
+      </li>
+    </ol>
+  </main>
+</body>
+</html>
