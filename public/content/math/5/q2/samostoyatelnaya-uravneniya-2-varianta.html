@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Самостоятельная работа по математике — уравнения, 2 варианта</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 10mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 11.5pt;
+      line-height: 1.25;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      width: 100%;
+      align-items: center;
+    }
+
+    .variant {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5mm 0 3mm;
+    }
+
+    .variant:first-child {
+      border-right: 1.5px dashed #666;
+      padding-right: 6mm;
+    }
+
+    .variant:last-child {
+      padding-left: 6mm;
+    }
+
+    .header {
+      margin-bottom: 3mm;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0 0 2mm;
+      font-size: 14pt;
+      font-weight: 700;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 3mm;
+      font-size: 10.5pt;
+    }
+
+    .meta .line {
+      display: inline-block;
+      min-width: 38mm;
+      border-bottom: 1px solid #000;
+      vertical-align: bottom;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 6mm;
+    }
+
+    li {
+      margin: 0 0 3.2mm;
+      padding-left: 1mm;
+    }
+
+    .task-title {
+      font-weight: 700;
+    }
+
+    .subtasks {
+      margin-top: 1mm;
+    }
+
+    .subtasks div {
+      margin: 0.7mm 0;
+    }
+
+    .expr {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .space {
+      display: block;
+      height: 11mm;
+    }
+
+    .space-sm {
+      display: block;
+      height: 7mm;
+    }
+
+    @media screen {
+      body {
+        background: #ddd;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sheet {
+        width: 297mm;
+        min-height: 210mm;
+        margin: 12px auto;
+        padding: 10mm;
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+      }
+    }
+
+    @media print {
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sheet {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        align-items: center;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="variant">
+      <header class="header">
+        <h1>Вариант 1</h1>
+        <div class="meta">
+          <span>Фамилия имя: <span class="line"></span></span>
+          <span>Класс: <span class="line" style="min-width:16mm"></span></span>
+        </div>
+      </header>
+
+      <ol>
+        <li>
+          <span class="task-title">Решите уравнение:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">486 + x = 731</span>;</div>
+            <div>б) <span class="expr">452 − y = 187</span>.</div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Решите уравнение и выполните проверку:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">128 − (46 + a) = 53</span>;</div>
+            <div>б) <span class="expr">(b − 28) − 47 = 19</span>.</div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">На координатной прямой отмечены точки</span>
+          <span class="expr">A(18)</span>, <span class="expr">C(5)</span>, <span class="expr">E(34)</span>, <span class="expr">F(26)</span>, <span class="expr">K(15)</span>, <span class="expr">O(0)</span>.
+          Какие из этих точек лежат:
+          <div class="subtasks">
+            <div>а) правее точки <span class="expr">K</span> и на сколько единичных отрезков;</div>
+            <div>б) левее точки <span class="expr">A</span> и на сколько единичных отрезков;</div>
+            <div>в) между точками <span class="expr">C</span> и <span class="expr">E</span>?</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Решите задачу.</span>
+          На молочной ферме надоили 850 л молока. Из них 370 л отправили на завод, а остальное молоко разлили в двухлитровые бутылки. Сколько бутылок для этого потребовалось?
+        </li>
+      </ol>
+    </section>
+
+    <section class="variant">
+      <header class="header">
+        <h1>Вариант 2</h1>
+        <div class="meta">
+          <span>Фамилия имя: <span class="line"></span></span>
+          <span>Класс: <span class="line" style="min-width:16mm"></span></span>
+        </div>
+      </header>
+
+      <ol>
+        <li>
+          <span class="task-title">Решите уравнение:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">639 + m = 814</span>;</div>
+            <div>б) <span class="expr">573 − n = 246</span>.</div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Решите уравнение и выполните проверку:</span>
+          <div class="subtasks">
+            <div>а) <span class="expr">146 − (58 + c) = 41</span>;</div>
+            <div>б) <span class="expr">(d − 43) − 29 = 18</span>.</div>
+          </div>
+          <span class="space"></span>
+        </li>
+
+        <li>
+          <span class="task-title">На координатной прямой отмечены точки</span>
+          <span class="expr">P(21)</span>, <span class="expr">R(8)</span>, <span class="expr">S(36)</span>, <span class="expr">T(28)</span>, <span class="expr">Q(14)</span>, <span class="expr">O(0)</span>.
+          Какие из этих точек лежат:
+          <div class="subtasks">
+            <div>а) правее точки <span class="expr">Q</span> и на сколько единичных отрезков;</div>
+            <div>б) левее точки <span class="expr">P</span> и на сколько единичных отрезков;</div>
+            <div>в) между точками <span class="expr">R</span> и <span class="expr">S</span>?</div>
+          </div>
+          <span class="space-sm"></span>
+        </li>
+
+        <li>
+          <span class="task-title">Решите задачу.</span>
+          В магазин привезли 960 кг муки. Из них 280 кг продали в первый день, а остальную муку разложили в двухкилограммовые пакеты. Сколько пакетов для этого потребовалось?
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

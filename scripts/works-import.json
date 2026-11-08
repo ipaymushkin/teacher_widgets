@@ -250,5 +250,23 @@
         "title": "Контрольная работа — ответы",
         "createdAt": "2026-10-15T18:15:44",
         "path": "/content/math/5/q1/kontrolnaya-chisloye-bukvennye-otvety.html"
+    },
+    {
+        "id": "math-5-q2-samostoyatelnaya-uravneniya-2-varianta",
+        "subject": "math",
+        "grade": 5,
+        "quarter": 2,
+        "title": "Самостоятельная работа по математике — уравнения, 2 варианта",
+        "createdAt": "2026-11-08T22:50:00",
+        "path": "/content/math/5/q2/samostoyatelnaya-uravneniya-2-varianta.html"
+    },
+    {
+        "id": "math-5-q2-samostoyatelnaya-uravneniya-otvety",
+        "subject": "math",
+        "grade": 5,
+        "quarter": 2,
+        "title": "Самостоятельная работа — уравнения, ответы",
+        "createdAt": "2026-11-08T22:51:00",
+        "path": "/content/math/5/q2/samostoyatelnaya-uravneniya-otvety.html"
     }
 ]
