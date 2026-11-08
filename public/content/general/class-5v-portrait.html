@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Список учеников 5В класса</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      background: #fff;
+      font-family: "Palatino Linotype", Palatino, "Times New Roman", Times, serif;
+    }
+
+    .sheet {
+      width: 186mm;
+      height: 273mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      flex: none;
+      margin: 0 0 4mm;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20pt;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+    }
+
+    .rule {
+      width: 46mm;
+      height: 1.6mm;
+      margin: 3.2mm auto 0;
+      border-top: 0.45mm solid #1a1a1a;
+      border-bottom: 0.15mm solid #1a1a1a;
+    }
+
+    ol {
+      flex: 1;
+      display: grid;
+      grid-template-columns: max-content;
+      grid-template-rows: repeat(27, 1fr);
+      justify-content: start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: student;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      min-width: 0;
+      font-size: 14pt;
+      line-height: 1.1;
+      counter-increment: student;
+    }
+
+    li::before {
+      content: counter(student);
+      flex: none;
+      width: 7mm;
+      color: #6a6a6a;
+      font-size: 11pt;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+    }
+
+    .name {
+      white-space: nowrap;
+    }
+
+    @media screen {
+      body {
+        background: #e6e2dc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sheet {
+        width: 210mm;
+        height: 297mm;
+        margin: 12px auto;
+        padding: 12mm;
+        background: #fff;
+        box-shadow: 0 2px 16px rgb(0 0 0 / 16%);
+      }
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      .sheet {
+        margin: 0;
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <h1>Список учеников 5В класса</h1>
+      <div class="rule"></div>
+    </header>
+    <ol>
+      <li><span class="name">Асатрян Гор Эдуардович</span></li>
+      <li><span class="name">Бровкин Марк Владимирович</span></li>
+      <li><span class="name">Глазкова Матрона Васильевна</span></li>
+      <li><span class="name">Данилова София Сергеевна</span></li>
+      <li><span class="name">Жиделева Алеся Алексеевна</span></li>
+      <li><span class="name">Ипатова Арина Ярославовна</span></li>
+      <li><span class="name">Кандялян Марьяна Араевна</span></li>
+      <li><span class="name">Константинова Варвара Игоревна</span></li>
+      <li><span class="name">Коробова Мария Леонидовна</span></li>
+      <li><span class="name">Котелев Егор Андреевич</span></li>
+      <li><span class="name">Кулябина Ксения Дмитриевна</span></li>
+      <li><span class="name">Кулябина Софья Дмитриевна</span></li>
+      <li><span class="name">Макарова Алина Александровна</span></li>
+      <li><span class="name">Машинина Дарья Алексеевна</span></li>
+      <li><span class="name">Охапкин Арсений Романович</span></li>
+      <li><span class="name">Павличенко Злата Леонидовна</span></li>
+      <li><span class="name">Палакян Милена Эдгаровна</span></li>
+      <li><span class="name">Петренко Лев Антонович</span></li>
+      <li><span class="name">Пугачева Вероника Павловна</span></li>
+      <li><span class="name">Ремизов Михаил Александрович</span></li>
+      <li><span class="name">Саарян Артем Арменович</span></li>
+      <li><span class="name">Силина Диана Александровна</span></li>
+      <li><span class="name">Федосеев Юрий Артемович</span></li>
+      <li><span class="name">Чередниченко Леонид Артемович</span></li>
+      <li><span class="name">Шакель Михаил Павлович</span></li>
+      <li><span class="name">Шарифов Билал Раил оглы</span></li>
+      <li><span class="name">Шафранская Ева Игоревна</span></li>
+    </ol>
+  </main>
+</body>
+</html>

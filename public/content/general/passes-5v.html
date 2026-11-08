@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пропуска 5В — для печати</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .sheet {
+      width: 297mm;
+      height: 210mm;
+      display: grid;
+      grid-template-columns: repeat(3, 80mm);
+      grid-template-rows: repeat(3, 55mm);
+      align-content: start;
+      justify-content: start;
+      padding: 12.7mm 0 0 10.7mm;
+    }
+
+    .card {
+      width: 80mm;
+      height: 55mm;
+      border-color: #000;
+      border-style: solid;
+      border-width: 0 0.15mm 0.15mm 0;
+      padding: 3.4mm 1.2mm 2mm 3.2mm;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .card:nth-child(3n + 1) {
+      border-left-width: 0.15mm;
+    }
+
+    .card:nth-child(-n + 3) {
+      border-top-width: 0.15mm;
+    }
+
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+    }
+
+    .school {
+      margin: 0;
+      text-align: center;
+      font-size: 12pt;
+      font-weight: 400;
+      line-height: 1.12;
+    }
+
+    .body {
+      margin-top: 3mm;
+      display: grid;
+      grid-template-columns: 24.7mm 1fr;
+      column-gap: 1.6mm;
+      align-items: center;
+    }
+
+    img {
+      width: 24.7mm;
+      height: 24.7mm;
+      object-fit: cover;
+      object-position: center 18%;
+      border: 0;
+    }
+
+    dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 18.5mm 1fr;
+      column-gap: 1.2mm;
+      row-gap: 0.2mm;
+      align-items: baseline;
+      font-size: 12pt;
+      line-height: 1.15;
+    }
+
+    dt,
+    dd {
+      margin: 0;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    dt.klass {
+      grid-column: 1 / -1;
+    }
+
+    dd.klass {
+      display: none;
+    }
+
+    @media screen {
+      body {
+        background: #ddd;
+      }
+
+      .sheet {
+        margin: 8mm auto;
+        background: #fff;
+        box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+      }
+    }
+
+    @media print {
+      .sheet {
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .sheet:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="sheet">
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/01.jpg" alt="Асатрян Гор" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Асатрян</dd>
+            <dt>Имя:</dt><dd>Гор</dd>
+            <dt>Отчество:</dt><dd>Эдуардович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/02.jpg" alt="Бровкин Марк" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Бровкин</dd>
+            <dt>Имя:</dt><dd>Марк</dd>
+            <dt>Отчество:</dt><dd>Владимирович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/03.jpg" alt="Глазкова Матрона" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Глазкова</dd>
+            <dt>Имя:</dt><dd>Матрона</dd>
+            <dt>Отчество:</dt><dd>Васильевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/04.jpg" alt="Данилова София" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Данилова</dd>
+            <dt>Имя:</dt><dd>София</dd>
+            <dt>Отчество:</dt><dd>Сергеевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/05.jpg" alt="Жиделева Алеся" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Жиделева</dd>
+            <dt>Имя:</dt><dd>Алеся</dd>
+            <dt>Отчество:</dt><dd>Алексеевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/06.jpg" alt="Ипатова Арина" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Ипатова</dd>
+            <dt>Имя:</dt><dd>Арина</dd>
+            <dt>Отчество:</dt><dd>Ярославовна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/07.jpg" alt="Кандялян Марьяна" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Кандялян</dd>
+            <dt>Имя:</dt><dd>Марьяна</dd>
+            <dt>Отчество:</dt><dd>Араевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/08.jpg" alt="Константинова Варвара" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Константинова</dd>
+            <dt>Имя:</dt><dd>Варвара</dd>
+            <dt>Отчество:</dt><dd>Игоревна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/09.jpg" alt="Коробова Мария" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Коробова</dd>
+            <dt>Имя:</dt><dd>Мария</dd>
+            <dt>Отчество:</dt><dd>Леонидовна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+  </section>
+  <section class="sheet">
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/10.jpg" alt="Котелев Егор" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Котелев</dd>
+            <dt>Имя:</dt><dd>Егор</dd>
+            <dt>Отчество:</dt><dd>Андреевич</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/11.jpg" alt="Кулябина Ксения" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Кулябина</dd>
+            <dt>Имя:</dt><dd>Ксения</dd>
+            <dt>Отчество:</dt><dd>Дмитриевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/12.jpg" alt="Кулябина Софья" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Кулябина</dd>
+            <dt>Имя:</dt><dd>Софья</dd>
+            <dt>Отчество:</dt><dd>Дмитриевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/13.jpg" alt="Макарова Алина" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Макарова</dd>
+            <dt>Имя:</dt><dd>Алина</dd>
+            <dt>Отчество:</dt><dd>Александровна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/14.jpg" alt="Машинина Дарья" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Машинина</dd>
+            <dt>Имя:</dt><dd>Дарья</dd>
+            <dt>Отчество:</dt><dd>Алексеевна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/15.jpg" alt="Охапкин Арсений" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Охапкин</dd>
+            <dt>Имя:</dt><dd>Арсений</dd>
+            <dt>Отчество:</dt><dd>Романович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/16.jpg" alt="Павличенко Злата" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Павличенко</dd>
+            <dt>Имя:</dt><dd>Злата</dd>
+            <dt>Отчество:</dt><dd>Леонидовна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/17.jpg" alt="Палакян Милена" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Палакян</dd>
+            <dt>Имя:</dt><dd>Милена</dd>
+            <dt>Отчество:</dt><dd>Эдгаровна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/18.jpg" alt="Петренко Лев" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Петренко</dd>
+            <dt>Имя:</dt><dd>Лев</dd>
+            <dt>Отчество:</dt><dd>Антонович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+  </section>
+  <section class="sheet">
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/19.jpg" alt="Пугачева Вероника" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Пугачева</dd>
+            <dt>Имя:</dt><dd>Вероника</dd>
+            <dt>Отчество:</dt><dd>Павловна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/20.jpg" alt="Ремизов Михаил" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Ремизов</dd>
+            <dt>Имя:</dt><dd>Михаил</dd>
+            <dt>Отчество:</dt><dd>Александрович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/21.jpg" alt="Саарян Артем" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Саарян</dd>
+            <dt>Имя:</dt><dd>Артем</dd>
+            <dt>Отчество:</dt><dd>Арменович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/22.jpg" alt="Силина Диана" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Силина</dd>
+            <dt>Имя:</dt><dd>Диана</dd>
+            <dt>Отчество:</dt><dd>Александровна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/23.jpg" alt="Федосеев Юрий" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Федосеев</dd>
+            <dt>Имя:</dt><dd>Юрий</dd>
+            <dt>Отчество:</dt><dd>Артемович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/24.jpg" alt="Чередниченко Леонид" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Чередниченко</dd>
+            <dt>Имя:</dt><dd>Леонид</dd>
+            <dt>Отчество:</dt><dd>Артемович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/25.jpg" alt="Шакель Михаил" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Шакель</dd>
+            <dt>Имя:</dt><dd>Михаил</dd>
+            <dt>Отчество:</dt><dd>Павлович</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/26.jpg" alt="Шарифов Билал" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Шарифов</dd>
+            <dt>Имя:</dt><dd>Билал</dd>
+            <dt>Отчество:</dt><dd>Раил оглы</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ПРОПУСК</h2>
+        <p class="school">МОУ СОШ «Образовательный<br>комплекс №3» ЦО Гимназия</p>
+        <div class="body">
+          <img src="passes-5v/27.jpg" alt="Шафранская Ева" width="281" height="281">
+          <dl>
+            <dt>Фамилия:</dt><dd>Шафранская</dd>
+            <dt>Имя:</dt><dd>Ева</dd>
+            <dt>Отчество:</dt><dd>Игоревна</dd>
+            <dt class="klass">Ученик класса: 5 «В»</dt><dd class="klass"></dd>
+          </dl>
+        </div>
+      </article>
+  </section>
+</body>
+</html>
