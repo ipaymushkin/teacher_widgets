@@ -10,6 +10,7 @@ export type WorkItem = {
   title: string
   createdAt: string
   path: string
+  answersPath?: string
 }
 
 export const worksCatalog: WorkItem[] = [
@@ -21,6 +22,7 @@ export const worksCatalog: WorkItem[] = [
     title: "English worksheet: missing letters & tracing (A4 landscape, 2-up)",
     createdAt: "2026-09-16T16:54:29",
     path: "/content/english/2/q1/english-letters-a4.html",
+    answersPath: "/content/english/2/q1/english-letters-answer-key.html",
   },
   {
     id: "english-2-q1-school-again-worksheet",
@@ -30,6 +32,7 @@ export const worksCatalog: WorkItem[] = [
     title: "School again! — Printable worksheet",
     createdAt: "2026-09-20T22:43:15",
     path: "/content/english/2/q1/school-again-worksheet.html",
+    answersPath: "/content/english/2/q1/school-again-answer-key.html",
   },
   {
     id: "english-2-q1-english-alphabet-a4-landscape",
@@ -48,15 +51,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Spotlight 3 — контрольная работа, 2 варианта",
     createdAt: "2026-10-07T00:00:21",
     path: "/content/english/3/q1/english-test-variants.html",
-  },
-  {
-    id: "english-3-q1-english-test-answer-key",
-    subject: "english",
-    grade: 3,
-    quarter: 1,
-    title: "Spotlight 3 — ответы к контрольной работе",
-    createdAt: "2026-10-07T10:12:01",
-    path: "/content/english/3/q1/english-test-answer-key.html",
+    answersPath: "/content/english/3/q1/english-test-answer-key.html",
   },
   {
     id: "english-4-q1-spotlight-tasks-landscape",
@@ -66,6 +61,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Spotlight 4 — задания, страницы 6–7",
     createdAt: "2026-09-23T00:34:37",
     path: "/content/english/4/q1/spotlight-tasks-landscape.html",
+    answersPath: "/content/english/4/q1/spotlight-tasks-answer-key.html",
   },
   {
     id: "english-4-q1-variant-1",
@@ -75,6 +71,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Independent Work — Variant 1",
     createdAt: "2026-10-11T22:15:49",
     path: "/content/english/4/q1/variant_1.html",
+    answersPath: "/content/english/4/q1/answer_key.html",
   },
   {
     id: "english-4-q1-variant-2",
@@ -84,6 +81,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Independent Work — Variant 2",
     createdAt: "2026-10-11T22:15:56",
     path: "/content/english/4/q1/variant_2.html",
+    answersPath: "/content/english/4/q1/answer_key.html",
   },
   {
     id: "english-4-q1-samostoyatelnaya-2-varianta",
@@ -93,15 +91,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Independent Work — 2 Variants",
     createdAt: "2026-10-11T22:16:04",
     path: "/content/english/4/q1/samostoyatelnaya_2_varianta.html",
-  },
-  {
-    id: "english-4-q1-answer-key",
-    subject: "english",
-    grade: 4,
-    quarter: 1,
-    title: "Answer Key — Independent Work",
-    createdAt: "2026-10-13T22:26:03",
-    path: "/content/english/4/q1/answer_key.html",
+    answersPath: "/content/english/4/q1/answer_key.html",
   },
   {
     id: "english-5-q1-spotlight-5-tasks-landscape",
@@ -111,6 +101,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Spotlight 5 — задания, страницы 12–13",
     createdAt: "2026-09-23T00:42:05",
     path: "/content/english/5/q1/spotlight-5-tasks-landscape.html",
+    answersPath: "/content/english/5/q1/spotlight-5-tasks-answer-key.html",
   },
   {
     id: "english-5-q1-spotlight-5-wb-pages-6-7-a4",
@@ -120,6 +111,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Spotlight 5 WB — страницы 6–7",
     createdAt: "2026-09-27T18:15:26",
     path: "/content/english/5/q1/spotlight-5-wb-pages-6-7-a4.html",
+    answersPath: "/content/english/5/q1/spotlight-5-wb-answer-key.html",
   },
   {
     id: "english-5-q1-spotlight-5-page-34-landscape",
@@ -129,15 +121,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Spotlight 5 — страница 34 (Progress Check 1)",
     createdAt: "2026-10-18T23:20:00",
     path: "/content/english/5/q1/spotlight-5-page-34-landscape.html",
-  },
-  {
-    id: "english-5-q1-spotlight-5-page-34-answer-key",
-    subject: "english",
-    grade: 5,
-    quarter: 1,
-    title: "Spotlight 5 — Progress Check 1 — ответы",
-    createdAt: "2026-10-19T18:20:00",
-    path: "/content/english/5/q1/spotlight-5-page-34-answer-key.html",
+    answersPath: "/content/english/5/q1/spotlight-5-page-34-answer-key.html",
   },
   {
     id: "math-5-q1-kontrolnaya-mat-5",
@@ -147,6 +131,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Самостоятельная работа. Натуральные числа. Плоскость, прямая, луч",
     createdAt: "2026-09-13T22:25:35",
     path: "/content/math/5/q1/kontrolnaya-mat-5.html",
+    answersPath: "/content/math/5/q1/kontrolnaya-mat-5-otvety.html",
   },
   {
     id: "math-5-q1-matematika-zadaniya",
@@ -156,6 +141,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Задания по математике",
     createdAt: "2026-09-21T00:14:54",
     path: "/content/math/5/q1/matematika-zadaniya.html",
+    answersPath: "/content/math/5/q1/matematika-zadaniya-otvety.html",
   },
   {
     id: "math-5-q1-matematika-zadaniya-variant-2",
@@ -165,6 +151,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Задания по математике — вариант 2",
     createdAt: "2026-09-21T22:43:38",
     path: "/content/math/5/q1/matematika-zadaniya-variant-2.html",
+    answersPath: "/content/math/5/q1/matematika-zadaniya-variant-2-otvety.html",
   },
   {
     id: "math-5-q1-matematika-zadaniya-variant-3",
@@ -174,6 +161,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Задания по математике — вариант 1",
     createdAt: "2026-09-21T22:46:31",
     path: "/content/math/5/q1/matematika-zadaniya-variant-3.html",
+    answersPath: "/content/math/5/q1/matematika-zadaniya-variant-3-otvety.html",
   },
   {
     id: "math-5-q1-matematika-zadaniya-variant-4",
@@ -183,6 +171,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Задания по математике — вариант 4",
     createdAt: "2026-09-23T23:27:40",
     path: "/content/math/5/q1/matematika-zadaniya-variant-4.html",
+    answersPath: "/content/math/5/q1/matematika-zadaniya-variant-4-otvety.html",
   },
   {
     id: "math-5-q1-kontrolnaya-matematika",
@@ -192,6 +181,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Контрольная работа по математике — 2 варианта",
     createdAt: "2026-09-30T22:50:12",
     path: "/content/math/5/q1/kontrolnaya-matematika.html",
+    answersPath: "/content/math/5/q1/kontrolnaya-matematika-list-otvety.html",
   },
   {
     id: "math-5-q1-samostoyatelnaya-matematika-2-varianta",
@@ -201,15 +191,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Самостоятельная работа по математике — 2 варианта",
     createdAt: "2026-10-13T17:36:15",
     path: "/content/math/5/q1/samostoyatelnaya-matematika-2-varianta.html",
-  },
-  {
-    id: "math-5-q1-samostoyatelnaya-matematika-otvety",
-    subject: "math",
-    grade: 5,
-    quarter: 1,
-    title: "Самостоятельная работа — ответы",
-    createdAt: "2026-10-13T17:41:15",
-    path: "/content/math/5/q1/samostoyatelnaya-matematika-otvety.html",
+    answersPath: "/content/math/5/q1/samostoyatelnaya-matematika-otvety.html",
   },
   {
     id: "math-5-q1-kontrolnaya-matematika-2-varianta",
@@ -219,15 +201,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Контрольная работа по математике — 2 варианта",
     createdAt: "2026-10-15T17:54:51",
     path: "/content/math/5/q1/kontrolnaya-matematika-2-varianta.html",
-  },
-  {
-    id: "math-5-q1-kontrolnaya-matematika-otvety",
-    subject: "math",
-    grade: 5,
-    quarter: 1,
-    title: "Контрольная работа — ответы",
-    createdAt: "2026-10-15T17:55:11",
-    path: "/content/math/5/q1/kontrolnaya-matematika-otvety.html",
+    answersPath: "/content/math/5/q1/kontrolnaya-matematika-otvety.html",
   },
   {
     id: "math-5-q1-kontrolnaya-matematika-1256-2-varianta",
@@ -237,15 +211,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Контрольная работа — задачи 1, 2, 5, 6 (расширенная)",
     createdAt: "2026-10-19T09:00:00",
     path: "/content/math/5/q1/kontrolnaya-matematika-1256-2-varianta.html",
-  },
-  {
-    id: "math-5-q1-kontrolnaya-matematika-1256-otvety",
-    subject: "math",
-    grade: 5,
-    quarter: 1,
-    title: "Контрольная работа (1, 2, 5, 6) — ответы",
-    createdAt: "2026-10-19T09:01:00",
-    path: "/content/math/5/q1/kontrolnaya-matematika-1256-otvety.html",
+    answersPath: "/content/math/5/q1/kontrolnaya-matematika-1256-otvety.html",
   },
   {
     id: "math-5-q1-kontrolnaya-chisloye-bukvennye",
@@ -255,15 +221,7 @@ export const worksCatalog: WorkItem[] = [
     title: "Контрольная работа — числовые и буквенные выражения",
     createdAt: "2026-10-15T18:04:01",
     path: "/content/math/5/q1/kontrolnaya-chisloye-bukvennye.html",
-  },
-  {
-    id: "math-5-q1-kontrolnaya-chisloye-bukvennye-otvety",
-    subject: "math",
-    grade: 5,
-    quarter: 1,
-    title: "Контрольная работа — ответы",
-    createdAt: "2026-10-15T18:15:44",
-    path: "/content/math/5/q1/kontrolnaya-chisloye-bukvennye-otvety.html",
+    answersPath: "/content/math/5/q1/kontrolnaya-chisloye-bukvennye-otvety.html",
   },
   {
     id: "math-5-q2-samostoyatelnaya-uravneniya-2-varianta",
@@ -273,14 +231,6 @@ export const worksCatalog: WorkItem[] = [
     title: "Самостоятельная работа по математике — уравнения, 2 варианта",
     createdAt: "2026-11-08T22:50:00",
     path: "/content/math/5/q2/samostoyatelnaya-uravneniya-2-varianta.html",
-  },
-  {
-    id: "math-5-q2-samostoyatelnaya-uravneniya-otvety",
-    subject: "math",
-    grade: 5,
-    quarter: 2,
-    title: "Самостоятельная работа — уравнения, ответы",
-    createdAt: "2026-11-08T22:51:00",
-    path: "/content/math/5/q2/samostoyatelnaya-uravneniya-otvety.html",
+    answersPath: "/content/math/5/q2/samostoyatelnaya-uravneniya-otvety.html",
   },
 ]

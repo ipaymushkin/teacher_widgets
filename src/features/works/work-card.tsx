@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Printer } from 'lucide-react'
 
 import {
   Card,
@@ -17,6 +18,7 @@ export type ContentCardItem = {
   title: string
   createdAt: string
   path: string
+  answersPath?: string
 }
 
 type WorkCardProps = {
@@ -43,13 +45,13 @@ export function WorkCard({ work }: WorkCardProps) {
   }, [])
 
   return (
-    <a
-      href={work.path}
-      target="_blank"
-      rel="noreferrer"
-      className="block h-full text-left"
-    >
-      <Card className="h-full overflow-hidden transition-colors hover:bg-muted/30">
+    <Card className="h-full gap-0 overflow-hidden py-0">
+      <a
+        href={work.path}
+        target="_blank"
+        rel="noreferrer"
+        className="block text-left"
+      >
         <div
           ref={frameRef}
           className="relative aspect-[4/3] overflow-hidden border-b bg-white"
@@ -70,13 +72,31 @@ export function WorkCard({ work }: WorkCardProps) {
             />
           </div>
         </div>
-        <CardHeader className="gap-1.5">
-          <CardTitle className="line-clamp-2 text-sm leading-snug">
+      </a>
+      <CardHeader className="gap-1.5">
+        <a
+          href={work.path}
+          target="_blank"
+          rel="noreferrer"
+          className="text-left"
+        >
+          <CardTitle className="line-clamp-2 text-sm leading-snug hover:underline">
             {work.title}
           </CardTitle>
-          <CardDescription>{formatWorkDate(work.createdAt)}</CardDescription>
-        </CardHeader>
-      </Card>
-    </a>
+        </a>
+        <CardDescription>{formatWorkDate(work.createdAt)}</CardDescription>
+        {work.answersPath ? (
+          <a
+            href={work.answersPath}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-0.5 inline-flex w-fit items-center gap-1.5 rounded-md border bg-background px-2 py-1 text-xs font-medium hover:bg-muted"
+          >
+            <Printer className="size-3.5" />
+            Печать ответов
+          </a>
+        ) : null}
+      </CardHeader>
+    </Card>
   )
 }

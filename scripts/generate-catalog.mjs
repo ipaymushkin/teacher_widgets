@@ -17,7 +17,7 @@ const body = data
     quarter: ${w.quarter},
     title: ${JSON.stringify(w.title)},
     createdAt: ${JSON.stringify(w.createdAt)},
-    path: ${JSON.stringify(w.path)},
+    path: ${JSON.stringify(w.path)},${w.answersPath ? `\n    answersPath: ${JSON.stringify(w.answersPath)},` : ''}
   }`
   })
   .join(',\n')
@@ -34,6 +34,7 @@ export type WorkItem = {
   title: string
   createdAt: string
   path: string
+  answersPath?: string
 }
 
 export const worksCatalog: WorkItem[] = [
