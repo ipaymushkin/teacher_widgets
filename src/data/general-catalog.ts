@@ -24,4 +24,10 @@ export const generalCatalog: GeneralItem[] = [
     createdAt: '2026-11-08T23:16:00',
     path: '/content/general/passes-5v.html',
   },
+  {
+    id: 'seating-5v',
+    title: 'Рассадка 5В класса',
+    createdAt: '2026-11-09T15:40:00',
+    path: '/content/general/seating-5v.html',
+  },
 ]
